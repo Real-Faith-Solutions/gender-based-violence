@@ -1,0 +1,582 @@
+/*Background color*/
+#grad1 {
+    background-color: #9C27B0;
+    background-image: linear-gradient(120deg, #FF4081, #81D4FA);
+}
+
+/*form styles*/
+#msform {
+    text-align: left;
+    position: relative;
+    margin-top: 20px;
+}
+
+.ms-icon {
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+#msform fieldset .form-card {
+    background: white;
+    border: 0 none;
+    border-radius: 0px;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 20px 40px 30px 40px;
+    box-sizing: border-box;
+    width: 94%;
+    margin: 0 3% 20px 3%;
+
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+#msform fieldset .form-card {
+    text-align: left;
+    color: #9E9E9E;
+}
+
+/*#msform input, #msform textarea {
+    padding: 0px 8px 4px 8px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+#msform input:focus, #msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none;
+    font-weight: bold;
+    border-bottom: 2px solid skyblue;
+    outline-width: 0;
+}*/
+
+/*Blue Buttons*/
+#msform .action-button {
+    width: 100px;
+    background: skyblue;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    outline: none;
+    margin: 10px 5px;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    /* box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue; */
+    opacity: 0.7;
+    transition: 0.7s;
+}
+
+/*Previous Buttons*/
+#msform .action-button-previous {
+    width: 100px;
+    background: #e74a3b;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    /* box-shadow: 0 0 0 2px white, 0 0 0 3px #616161; */
+    opacity: 0.7;
+    transition: 0.7s;
+}
+
+/*Dropdown List Exp Date*/
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 2px;
+}
+
+select.list-dt:focus {
+    border-bottom: 2px solid skyblue;
+}
+
+/*The background card*/
+.card {
+    z-index: 0;
+    border: none;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+/*FieldSet headings*/
+.fs-title {
+    font-size: 25px;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/*progressbar*/
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey;
+
+}
+
+.progressbar-label {
+    flex: 1;
+    align-content: space-around;
+
+}
+
+#progressbar .active {
+    color: #000000;
+
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 12px;
+    width: 25%;
+
+    /* float: left; */
+}
+
+/*Icons in the ProgressBar*/
+#progressbar #personalDetails:before {
+    text-align: center;
+    content: "1";
+
+}
+
+#progressbar #familyBackground:before {
+    text-align: center;
+    content: "2";
+}
+
+#progressbar #incidenceDetails:before {
+    text-align: center;
+    content: "3";
+}
+
+#progressbar #perpetratorDetails:before {
+    text-align: center;
+    content: "4";
+}
+
+#progressbar #interventionModule:before {
+    text-align: center;
+    content: "5";
+}
+
+#progressbar #referralModule:before {
+    text-align: center;
+    content: "6";
+}
+
+#progressbar #caseModule:before {
+    text-align: center;
+    content: "7";
+}
+
+/*ProgressBar before any progress*/
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px;
+}
+
+/*ProgressBar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1;
+}
+
+/*Color number of the step and the connector before it*/
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #e74a3b;
+}
+
+
+
+
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+.progress {
+    height: 5px;
+    width: 100%;
+}
+
+.progress-bar {
+    width: 100px;
+}
+
+
+.box1 {
+    border-left: 10px solid #4e73df;
+}
+
+.box2 {
+    border-left: 10px solid #e74a3b;
+}
+
+.box3 {
+    border-left: 10px solid#1cc88a;
+}
+
+.box4 {
+    border-left: 10px solid#36b9cc;
+}
+
+.wh-bg {
+    width: 100%;
+    background-color: #fff;
+    color: red;
+}
+
+.legend-danger,
+.legend-info,
+.legend-success {
+    margin-top: 6px;
+    margin-right: 1%;
+    margin-left: 1%;
+
+    width: 40px;
+    height: 40%;
+    border: none;
+
+}
+
+.legend-danger {
+    background: red;
+}
+
+.legend-success {
+    background: green;
+}
+
+.legend-info {
+    background: cyan;
+}
+
+nav {
+    height: 50%;
+}
+
+.btn-orange {
+    background: #e74a3b;
+    border: none;
+    font-size: medium;
+    color: #fff;
+}
+
+
+
+
+
+.text-orange-icon {
+    transition: 0.9s;
+    font-weight: bold;
+    margin-left: 30%;
+    color: #e74a3b;
+}
+
+.text-orange-icon:hover {
+    transition: 0.9s;
+    font-weight: bold;
+    color: #000;
+}
+
+
+.text-orange {
+    color: #e74a3b;
+
+}
+
+.btn-orange:hover {
+    background: #e74a3b;
+
+}
+
+.inactived {
+    color: #e74a3b;
+
+}
+
+.inactived:hover {
+    background: #e74a3b;
+    color: #fff;
+}
+
+.actived {
+    background: #e74a3b;
+    color: #fff;
+}
+
+.actived:hover {
+    background: #fff;
+    color: #e74a3b;
+}
+
+.card-group {
+    background: whitesmoke;
+}
+
+.button {
+    border-radius: 50%;
+    color: black;
+    background-color: rgb(156, 153, 153);
+}
+
+.date {
+    width: 32%;
+}
+
+.text-box {
+    width: 90%;
+}
+
+.card {
+    max-width: 100rem;
+}
+
+.asterisk {
+    color: red;
+}
+
+.search-textbox {
+    width: 50%;
+}
+
+.items {
+    display: block;
+    text-align: right;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-orange {
+    background: #e74a3b;
+    border: none;
+    font-size: medium;
+    color: #fff;
+}
+
+.pad-5{
+    padding: 5px;
+}
+
+.progress{
+    height: 5px;
+    width: 100%;
+}
+
+.progress-bar{
+    width: 100px;
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.thead-dark th {
+    color: #fff;
+    background-color: #5a5c69;
+    border-color: #6c6e7e;
+}
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0,.05);
+}
+
+table thead th, table thead td, table tfoot th, table tfoot td {
+    text-align: left;
+}
+
+table th, table td {
+    box-sizing: content-box;
+}
+
+table thead th, table thead td{
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+table thead th, table tfoot th {
+    font-weight: bold;
+    background-color: grey;
+    color: #fff;
+}
+
+table.no-footer {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.box1{
+    border-left: 10px solid #4e73df;
+}
+
+.box2{
+    border-left: 10px solid #e74a3b;
+}
+
+.box3{
+    border-left: 10px solid#1cc88a;
+}
+
+.wh-bg{
+    width: 100%;
+    background-color: #fff;
+    color: red;
+}
+
+.legend-danger, .legend-info,.legend-success{
+    margin-top: 6px;
+    margin-right: 1%;
+    margin-left: 1%;
+    width: 50px;
+    height: 15px;
+    border: none;
+
+}
+
+.legend-danger{
+    background: red;
+}
+
+.legend-success{
+    background: green;
+}
+
+.legend-info{
+    background: cyan;
+}
+
+/* nav{
+    height: 50%;
+} */
+
+.btn-orange{
+    background: #e74a3b;
+    border: none;
+    font-size: medium;
+    color: #fff;
+}
+
+
+
+
+
+.text-orange-icon{
+    transition: 0.9s;
+    font-weight: bold;
+    margin-left: 30%;
+    color: #e74a3b;
+}
+.text-orange-icon:hover{
+    transition: 0.9s;
+    font-weight: bold;
+    color: #000;
+}
+
+
+.text-orange{
+    color: #e74a3b;
+
+}
+.btn-orange:hover{
+    background: #e74a3b;
+
+}
+
+.inactived{
+    color: #e74a3b;
+
+}
+.inactived:hover{
+    background: #e74a3b;
+    color: #fff;
+}
+.actived{
+    background: #e74a3b;
+    color: #fff;
+}
+.actived:hover{
+    background: #fff;
+    color: #e74a3b;
+}
+
+.card-group{
+    background: whitesmoke;
+}
+
+#bread-header{
+    background: none;
+}

@@ -580,3 +580,29 @@ table.no-footer {
 #bread-header{
     background: none;
 }
+
+
+/* lats */
+
+@media (max-width: 576px) {
+    /* Styles for extra small screens */
+    #loginTextResponse {
+        color: #1cc88a;
+    }
+  }
+
+  @media (min-width: 577px) and (max-width: 992px) {
+    /* Styles for small to medium screens */
+    #loginTextResponse {
+        color: #1cc88a;
+    }
+  }
+
+  @media (min-width: 993px) {
+    /* Styles for large screens and above */
+    #loginTextResponse {
+        color: #1cc88a;
+    }
+  }
+
+

@@ -14,9 +14,9 @@
     <link href="{{ asset('css/all.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
-    
+
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini" >
     <div id="wrapper">
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -34,7 +34,7 @@
             </div>
         </div>
         <!-- ./wrapper -->
-
+    </div>
     <!-- Third party script resources -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js" type="text/javascript" ></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
@@ -45,7 +45,7 @@
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- Core plugin JavaScript-->
     <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
-    
+
     <!-- Custom scripts for all pages-->
     <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
 

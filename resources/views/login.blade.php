@@ -2,16 +2,16 @@
 
 @section('content')
 <!-- Outer Row -->
-<div class="row justify-content-center">
-    <div class="col-xl-9 col-lg-12 col-md-12">
-        <div class="card o-hidden border-0 shadow-lg my-2">
+<div class="row justify-content-center" style="height: 87vh; margin:auto; padding-top:25vh;">
+    <div class="col-xl-9 col-lg-12 col-md-12" >
+        <div class="card o-hidden border-0 shadow-lg my-2 mx-5 px-5">
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="p-5 mx-5">
                             <div class="text-center">
-                                <h1 class="h2 text-gray-900 mb-4">Welcome to GBV</h1>
+                                <h1 class="h-2 text-gray-900 mb-4">Welcome to GBV</h1>
                             </div>
                             <form class="user" method="POST" action="{{ env('APP_URL') }}login">
                                 @csrf <!-- {{ csrf_field() }} -->

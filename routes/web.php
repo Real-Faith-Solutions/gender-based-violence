@@ -71,7 +71,7 @@ Route::group([
         Route::get('get-case-status/{case_no}', [CaseController::class, 'getCaseStatus'])->middleware('userauth');
         Route::get('get-user-masterlist-rights', [CaseController::class, 'getUserMasterListRights'])->middleware('userauth');
         Route::get('migate-data-in-new-column-for-cases-table', [CaseController::class, 'migateDataInNewColumnForCasesTable'])->middleware('userauth');
-        
+
         // Additional security and redirect
         Route::get('add', [ParentPageRedirect::class, 'getApiAddHomePage'])->middleware('userauth');
         Route::get('upload/{case_no}', [ParentPageRedirect::class, 'getApiAddHomePage'])->middleware('userauth');
@@ -129,7 +129,6 @@ Route::group([
         Route::delete('delete/{id}', [CaseController::class, 'deletePerpetratorDetailInfos'])->middleware('userauth');
 
         // Additional security and redirect
-        Route::get('add', [ParentPageRedirect::class, 'getApiAddHomePage'])->middleware('userauth');
         Route::get('update/{id}', [ParentPageRedirect::class, 'getApiAddHomePage'])->middleware('userauth');
         Route::get('update', [ParentPageRedirect::class, 'getApiAddHomePage'])->middleware('userauth');
         Route::get('delete/{id}', [ParentPageRedirect::class, 'getApiAddHomePage'])->middleware('userauth');
@@ -260,7 +259,7 @@ Route::group([
         Route::get('update/{id}', [ParentPageRedirect::class, 'getApiAddHomePage'])->middleware('userauth');
         Route::get('update', [ParentPageRedirect::class, 'getApiAddHomePage'])->middleware('userauth');
         Route::get('delete/{id}', [ParentPageRedirect::class, 'getApiAddHomePage'])->middleware('userauth');
-        Route::get('delete', [ParentPageRedirect::class, 'getApiAddHomePage'])->middleware('userauth');       
+        Route::get('delete', [ParentPageRedirect::class, 'getApiAddHomePage'])->middleware('userauth');
     });
 
     Route::group([

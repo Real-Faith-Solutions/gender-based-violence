@@ -44,7 +44,7 @@
                   <div class="input-group-append">
                     <button class="btn btn-primary" type="submit" id="search_gbv_cases_per_month"><i class="fas fa-search fa-sm"></i></button>
                   </div>
-                </div>    
+                </div>
             </form>
         </div>
     </div>
@@ -84,19 +84,19 @@
                           <td>{{$casesdetails->case_no ?? '-'}}</td>
                           <td>{{$casesdetails->date_of_intake ?? '-'}}</td>
                           <td>{{$casesdetails->nature_of_incidence ?? '-'}}</td>
-                          {{-- Uncomment if preferred a list view 
+                          {{-- Uncomment if preferred a list view
                             <td>
                             @foreach(explode('|',$casesdetails->nature_of_incidence) as $nature_of_incidence_item)
                             @if(!empty($nature_of_incidence_item))
                             <li>{{ $nature_of_incidence_item }}</li>
                             @endif
-                            @endforeach 
+                            @endforeach
                             </td>
                           --}}
                         </tr>
-                        
+
                       @endforeach
-                    @endif  
+                    @endif
                   </tbody>
               </table>
             </div>

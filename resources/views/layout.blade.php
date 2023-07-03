@@ -31,18 +31,19 @@
                 <span>GENDER BASED VIOLENCE - IMS</span>
             </a>
 
-            @if(str_contains(App\Models\UserRole::pluck('page_access','role_name')[Auth::user()->role], "Dashboard")  == true)
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
+            @if(str_contains(App\Models\UserRole::pluck('page_access','role_name')[Auth::user()->role], "Dashboard"))
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="{{ env('APP_URL') }}admin/dashboard">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-            @endif
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('admin/dashboard') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+@endif
+
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -65,38 +66,40 @@
             </li>
             @endif
 
-            @if(str_contains(App\Models\UserRole::pluck('page_access','role_name')[Auth::user()->role], "Master List")  == true)
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Case Folder</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="{{ env('APP_URL') }}admin/case-folder/master-list">Master List</a>
-                    </div>
-                </div>
-            </li>
-            @endif
+            @if(str_contains(App\Models\UserRole::pluck('page_access','role_name')[Auth::user()->role], "Master List"))
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Case Folder</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ url('admin/case-folder/master-list') }}">Master List</a>
+            </div>
+        </div>
+    </li>
+@endif
 
-            @if(str_contains(App\Models\UserRole::pluck('page_access','role_name')[Auth::user()->role], "Reports")  == true)
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReports" aria-expanded="true" aria-controls="collapseReports">
-                    <i class="fas fa-fw fa-user"></i>
-                    <span>Reports</span>
-                </a>
-                <div id="collapseReports" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" style="white-space: pre-wrap;" href="{{ env('APP_URL') }}admin/report/list-of-cases-per-status-report">List of Cases per Status Report</a>
-                        <a class="collapse-item" style="white-space: pre-wrap;" href="{{ env('APP_URL') }}admin/report/list-of-perpetrator-relationship-to-victim">List of Perpetrator Relationship to Victim</a>
-                        <a class="collapse-item" style="white-space: pre-wrap;" href="{{ env('APP_URL') }}admin/report/list-of-gbv-cases-per-month">List of GBV Cases Per Month</a>
-                        <a class="collapse-item" style="white-space: pre-wrap;" href="{{ env('APP_URL') }}admin/report/list-of-gbv-cases-per-municipality">List of GBV Cases per Municipality</a>
-                        <a class="collapse-item" style="white-space: pre-wrap;" href="{{ env('APP_URL') }}admin/report/list-of-gbv-cases-per-province">List of GBV Cases per Province</a>
-                        <a class="collapse-item" style="white-space: pre-wrap;" href="{{ env('APP_URL') }}admin/report/list-of-gbv-cases-per-form-of-violence">List of GBV Cases per form of Violence</a>
-                    </div>
-                </div>
-            </li>
-            @endif
+
+@if(str_contains(App\Models\UserRole::pluck('page_access','role_name')[Auth::user()->role], "Reports"))
+<li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReports" aria-expanded="true" aria-controls="collapseReports">
+        <i class="fas fa-fw fa-user"></i>
+        <span>Reports</span>
+    </a>
+    <div id="collapseReports" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" style="white-space: pre-wrap;" href="{{ url('admin/report/list-of-cases-per-status-report') }}">List of Cases per Status Report</a>
+            <a class="collapse-item" style="white-space: pre-wrap;" href="{{ url('admin/report/list-of-perpetrator-relationship-to-victim') }}">List of Perpetrator Relationship to Victim</a>
+            <a class="collapse-item" style="white-space: pre-wrap;" href="{{ url('admin/report/list-of-gbv-cases-per-month') }}">List of GBV Cases Per Month</a>
+            <a class="collapse-item" style="white-space: pre-wrap;" href="{{ url('admin/report/list-of-gbv-cases-per-municipality') }}">List of GBV Cases per Municipality</a>
+            <a class="collapse-item" style="white-space: pre-wrap;" href="{{ url('admin/report/list-of-gbv-cases-per-province') }}">List of GBV Cases per Province</a>
+            <a class="collapse-item" style="white-space: pre-wrap;" href="{{ url('admin/report/list-of-gbv-cases-per-form-of-violence') }}">List of GBV Cases per form of Violence</a>
+        </div>
+    </div>
+</li>
+@endif
+
 
             @if(str_contains(App\Models\UserRole::pluck('page_access','role_name')[Auth::user()->role], "Rights Management")  == true)
             <li class="nav-item">
@@ -196,9 +199,9 @@
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="{{ env('APP_URL') }}admin/profile"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Profile</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ env('APP_URL') }}logout"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Logout</a>
+                                <a class="dropdown-item" href="{{ env('APP_URL') }}/admin/profile"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Profile</a>
+                                <a class="dropdown-item" href="{{ env('APP_URL') }}/logout"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Logout</a>
+
                             </div>
                         </li>
 
@@ -269,25 +272,25 @@
                     {
                         extend: 'copyHtml5',
                         @if(str_contains(Request::url(), 'master-list') == true)
-                        
+
                         title: 'GBV Master List',
                         @elseif(str_contains(Request::url(), 'list-of-cases-per-status-report') == true)
-                        
+
                         title: 'List of Cases per Status Report',
                         @elseif(str_contains(Request::url(), 'list-of-perpetrator-relationship-to-victim') == true)
-                        
+
                         title: 'List of Perpetrator Relationship to Victim',
                         @elseif(str_contains(Request::url(), 'list-of-gbv-cases-per-month') == true)
-                        
+
                         title: 'List of GBV Cases Per Month',
                         @elseif(str_contains(Request::url(), 'list-of-gbv-cases-per-municipality') == true)
-                        
+
                         title: 'List of GBV Cases per Municipality',
                         @elseif(str_contains(Request::url(), 'list-of-gbv-cases-per-province') == true)
-                        
+
                         title: 'List of GBV Cases per Province',
                         @elseif(str_contains(Request::url(), 'list-of-gbv-cases-per-form-of-violence') == true)
-                        
+
                         title: 'List of GBV Cases per form of Violence',
                         @endif
 
@@ -300,25 +303,25 @@
                     {
                         extend: 'excelHtml5',
                         @if(str_contains(Request::url(), 'master-list') == true)
-                        
+
                         title: 'GBV Master List',
                         @elseif(str_contains(Request::url(), 'list-of-cases-per-status-report') == true)
-                        
+
                         title: 'List of Cases per Status Report',
                         @elseif(str_contains(Request::url(), 'list-of-perpetrator-relationship-to-victim') == true)
-                        
+
                         title: 'List of Perpetrator Relationship to Victim',
                         @elseif(str_contains(Request::url(), 'list-of-gbv-cases-per-month') == true)
-                        
+
                         title: 'List of GBV Cases Per Month',
                         @elseif(str_contains(Request::url(), 'list-of-gbv-cases-per-municipality') == true)
-                        
+
                         title: 'List of GBV Cases per Municipality',
                         @elseif(str_contains(Request::url(), 'list-of-gbv-cases-per-province') == true)
-                        
+
                         title: 'List of GBV Cases per Province',
                         @elseif(str_contains(Request::url(), 'list-of-gbv-cases-per-form-of-violence') == true)
-                        
+
                         title: 'List of GBV Cases per form of Violence',
                         @endif
 
@@ -331,25 +334,25 @@
                     {
                         extend: 'csvHtml5',
                         @if(str_contains(Request::url(), 'master-list') == true)
-                        
+
                         title: 'GBV Master List',
                         @elseif(str_contains(Request::url(), 'list-of-cases-per-status-report') == true)
-                        
+
                         title: 'List of Cases per Status Report',
                         @elseif(str_contains(Request::url(), 'list-of-perpetrator-relationship-to-victim') == true)
-                        
+
                         title: 'List of Perpetrator Relationship to Victim',
                         @elseif(str_contains(Request::url(), 'list-of-gbv-cases-per-month') == true)
-                        
+
                         title: 'List of GBV Cases Per Month',
                         @elseif(str_contains(Request::url(), 'list-of-gbv-cases-per-municipality') == true)
-                        
+
                         title: 'List of GBV Cases per Municipality',
                         @elseif(str_contains(Request::url(), 'list-of-gbv-cases-per-province') == true)
-                        
+
                         title: 'List of GBV Cases per Province',
                         @elseif(str_contains(Request::url(), 'list-of-gbv-cases-per-form-of-violence') == true)
-                        
+
                         title: 'List of GBV Cases per form of Violence',
                         @endif
 
@@ -370,22 +373,22 @@
                             columns: [ 1,2,3,5.18,19,21,23,25,29,30,32,33 ]
                         },
                         @elseif(str_contains(Request::url(), 'list-of-cases-per-status-report') == true)
-                        
+
                         title: 'List of Cases per Status Report',
                         @elseif(str_contains(Request::url(), 'list-of-perpetrator-relationship-to-victim') == true)
-                        
+
                         title: 'List of Perpetrator Relationship to Victim',
                         @elseif(str_contains(Request::url(), 'list-of-gbv-cases-per-month') == true)
-                        
+
                         title: 'List of GBV Cases Per Month',
                         @elseif(str_contains(Request::url(), 'list-of-gbv-cases-per-municipality') == true)
-                        
+
                         title: 'List of GBV Cases per Municipality',
                         @elseif(str_contains(Request::url(), 'list-of-gbv-cases-per-province') == true)
-                        
+
                         title: 'List of GBV Cases per Province',
                         @elseif(str_contains(Request::url(), 'list-of-gbv-cases-per-form-of-violence') == true)
-                        
+
                         title: 'List of GBV Cases per form of Violence',
                         @endif
 
@@ -404,22 +407,22 @@
                             columns: [ 1,2,3,5.18,19,21,23,25,29,30,32,33 ]
                         },
                         @elseif(str_contains(Request::url(), 'list-of-cases-per-status-report') == true)
-                        
+
                         title: 'List of Cases per Status Report',
                         @elseif(str_contains(Request::url(), 'list-of-perpetrator-relationship-to-victim') == true)
-                        
+
                         title: 'List of Perpetrator Relationship to Victim',
                         @elseif(str_contains(Request::url(), 'list-of-gbv-cases-per-month') == true)
-                        
+
                         title: 'List of GBV Cases Per Month',
                         @elseif(str_contains(Request::url(), 'list-of-gbv-cases-per-municipality') == true)
-                        
+
                         title: 'List of GBV Cases per Municipality',
                         @elseif(str_contains(Request::url(), 'list-of-gbv-cases-per-province') == true)
-                        
+
                         title: 'List of GBV Cases per Province',
                         @elseif(str_contains(Request::url(), 'list-of-gbv-cases-per-form-of-violence') == true)
-                        
+
                         title: 'List of GBV Cases per form of Violence',
                         @endif
 
@@ -430,9 +433,9 @@
                         }
                     }
                 ],
-                
+
                 "paging": false,
-                // "pageLength": 25, 
+                // "pageLength": 25,
                 "lengthChange": true,
                 "searching": true,
                 "ordering": true,
@@ -446,6 +449,6 @@
         });
 
     </script>
-    
+
     </body>
 </html>

@@ -17,7 +17,9 @@ use App\Models\IncidenceDetailInfos;
 use App\Models\PerpetratorDetailInfos;
 use App\Models\InterventionModuleInfos;
 use Illuminate\Support\Facades\Auth;
-use DB;
+use Illuminate\Support\Facades\DB;
+
+// use DB;
 use App\Models\UserRole;
 
 class Dashboard extends Controller
@@ -43,12 +45,12 @@ class Dashboard extends Controller
                 echo $province->province.',';
             }
 
-           
+
             foreach($provinces as $province){
                 echo PersonalDetails::where('province','=',$province->province)->get()->count().',';
             }
-            
-            
+
+
             return $request->userId.$request->title.$request->completed;
         }
     }
@@ -132,7 +134,7 @@ class Dashboard extends Controller
                     $extracted_municipality_from_sorted_list_of_municipality = Cases::where('im_serv_prov','=',Auth::user()->user_service_provider)->select('city')->groupBy('city')->get();
                 }
 
-                
+
                 // Data Total GBV Cases Reporting per Barangay Graph
 
                 // Get Unique Municipal List
@@ -159,7 +161,7 @@ class Dashboard extends Controller
 
                     $extracted_ethnicity_from_sorted_list_of_ethnicity = Cases::where('im_serv_prov','=',Auth::user()->user_service_provider)->select('ethnicity')->groupBy('ethnicity')->get();
                 }
-                
+
 
                 // Data for GBV Cases Reporting per Month Graph
 
@@ -222,7 +224,7 @@ class Dashboard extends Controller
                 $sexual_harassment = Cases::where('im_serv_prov','=',Auth::user()->user_service_provider)->where('region','=',Auth::user()->user_region)->where('nature_of_incidence', 'like', '%Sexual Harassment%')->get()->count();
                 $child_abuse_exploitation_and_discrimination = Cases::where('im_serv_prov','=',Auth::user()->user_service_provider)->where('region','=',Auth::user()->user_region)->where('nature_of_incidence', 'like', '%Child Abuse, Exploitation and Discrimination%')->get()->count();
 
-                
+
                 // Data Total GBV Cases Reporting per Province Graph
 
                 // Get Unique Region List
@@ -254,7 +256,7 @@ class Dashboard extends Controller
                     $extracted_municipality_from_sorted_list_of_municipality = Cases::where('im_serv_prov','=',Auth::user()->user_service_provider)->where('region','=',Auth::user()->user_region)->select('city')->groupBy('city')->get();
                 }
 
-                
+
                 // Data Total GBV Cases Reporting per Barangay Graph
 
                 // Get Unique Municipal List
@@ -281,7 +283,7 @@ class Dashboard extends Controller
 
                     $extracted_ethnicity_from_sorted_list_of_ethnicity = Cases::where('im_serv_prov','=',Auth::user()->user_service_provider)->where('region','=',Auth::user()->user_region)->select('ethnicity')->groupBy('ethnicity')->get();
                 }
-                
+
 
                 // Data for GBV Cases Reporting per Month Graph
 
@@ -345,7 +347,7 @@ class Dashboard extends Controller
                 $sexual_harassment = Cases::where('im_serv_prov','=',Auth::user()->user_service_provider)->where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('nature_of_incidence', 'like', '%Sexual Harassment%')->get()->count();
                 $child_abuse_exploitation_and_discrimination = Cases::where('im_serv_prov','=',Auth::user()->user_service_provider)->where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('nature_of_incidence', 'like', '%Child Abuse, Exploitation and Discrimination%')->get()->count();
 
-                
+
                 // Data Total GBV Cases Reporting per Province Graph
 
                 // Get Unique Region List
@@ -377,7 +379,7 @@ class Dashboard extends Controller
                     $extracted_municipality_from_sorted_list_of_municipality = Cases::where('im_serv_prov','=',Auth::user()->user_service_provider)->where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->select('city')->groupBy('city')->get();
                 }
 
-                
+
                 // Data Total GBV Cases Reporting per Barangay Graph
 
                 // Get Unique Municipal List
@@ -404,7 +406,7 @@ class Dashboard extends Controller
 
                     $extracted_ethnicity_from_sorted_list_of_ethnicity = Cases::where('im_serv_prov','=',Auth::user()->user_service_provider)->where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->select('ethnicity')->groupBy('ethnicity')->get();
                 }
-                
+
 
                 // Data for GBV Cases Reporting per Month Graph
 
@@ -469,7 +471,7 @@ class Dashboard extends Controller
                 $sexual_harassment = Cases::where('im_serv_prov','=',Auth::user()->user_service_provider)->where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('city','=',Auth::user()->user_municipality)->where('nature_of_incidence', 'like', '%Sexual Harassment%')->get()->count();
                 $child_abuse_exploitation_and_discrimination = Cases::where('im_serv_prov','=',Auth::user()->user_service_provider)->where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('city','=',Auth::user()->user_municipality)->where('nature_of_incidence', 'like', '%Child Abuse, Exploitation and Discrimination%')->get()->count();
 
-                
+
                 // Data Total GBV Cases Reporting per Province Graph
 
                 // Get Unique Region List
@@ -501,7 +503,7 @@ class Dashboard extends Controller
                     $extracted_municipality_from_sorted_list_of_municipality = Cases::where('im_serv_prov','=',Auth::user()->user_service_provider)->where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('city','=',Auth::user()->user_municipality)->select('city')->groupBy('city')->get();
                 }
 
-                
+
                 // Data Total GBV Cases Reporting per Barangay Graph
 
                 // Get Unique Municipal List
@@ -528,7 +530,7 @@ class Dashboard extends Controller
 
                     $extracted_ethnicity_from_sorted_list_of_ethnicity = Cases::where('im_serv_prov','=',Auth::user()->user_service_provider)->where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('city','=',Auth::user()->user_municipality)->select('ethnicity')->groupBy('ethnicity')->get();
                 }
-                
+
 
                 // Data for GBV Cases Reporting per Month Graph
 
@@ -594,7 +596,7 @@ class Dashboard extends Controller
                 $sexual_harassment = Cases::where('im_serv_prov','=',Auth::user()->user_service_provider)->where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('city','=',Auth::user()->user_municipality)->where('barangay','=',Auth::user()->user_barangay)->where('nature_of_incidence', 'like', '%Sexual Harassment%')->get()->count();
                 $child_abuse_exploitation_and_discrimination = Cases::where('im_serv_prov','=',Auth::user()->user_service_provider)->where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('city','=',Auth::user()->user_municipality)->where('barangay','=',Auth::user()->user_barangay)->where('nature_of_incidence', 'like', '%Child Abuse, Exploitation and Discrimination%')->get()->count();
 
-                
+
                 // Data Total GBV Cases Reporting per Province Graph
 
                 // Get Unique Region List
@@ -626,7 +628,7 @@ class Dashboard extends Controller
                     $extracted_municipality_from_sorted_list_of_municipality = Cases::where('im_serv_prov','=',Auth::user()->user_service_provider)->where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('city','=',Auth::user()->user_municipality)->where('barangay','=',Auth::user()->user_barangay)->select('city')->groupBy('city')->get();
                 }
 
-                
+
                 // Data Total GBV Cases Reporting per Barangay Graph
 
                 // Get Unique Municipal List
@@ -653,7 +655,7 @@ class Dashboard extends Controller
 
                     $extracted_ethnicity_from_sorted_list_of_ethnicity = Cases::where('im_serv_prov','=',Auth::user()->user_service_provider)->where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('city','=',Auth::user()->user_municipality)->where('barangay','=',Auth::user()->user_barangay)->select('ethnicity')->groupBy('ethnicity')->get();
                 }
-                
+
 
                 // Data for GBV Cases Reporting per Month Graph
 
@@ -758,7 +760,7 @@ class Dashboard extends Controller
                     $extracted_municipality_from_sorted_list_of_municipality = Cases::select('city')->groupBy('city')->get();
                 }
 
-                
+
                 // Data Total GBV Cases Reporting per Barangay Graph
 
                 // Get Unique Municipal List
@@ -785,7 +787,7 @@ class Dashboard extends Controller
 
                     $extracted_ethnicity_from_sorted_list_of_ethnicity = Cases::select('ethnicity')->groupBy('ethnicity')->get();
                 }
-                
+
 
                 // Data for GBV Cases Reporting per Month Graph
 
@@ -847,7 +849,7 @@ class Dashboard extends Controller
                 $sexual_harassment = Cases::where('region','=',Auth::user()->user_region)->where('nature_of_incidence', 'like', '%Sexual Harassment%')->get()->count();
                 $child_abuse_exploitation_and_discrimination = Cases::where('region','=',Auth::user()->user_region)->where('nature_of_incidence', 'like', '%Child Abuse, Exploitation and Discrimination%')->get()->count();
 
-                
+
                 // Data Total GBV Cases Reporting per Province Graph
 
                 // Get Unique Region List
@@ -879,7 +881,7 @@ class Dashboard extends Controller
                     $extracted_municipality_from_sorted_list_of_municipality = Cases::where('region','=',Auth::user()->user_region)->select('city')->groupBy('city')->get();
                 }
 
-                
+
                 // Data Total GBV Cases Reporting per Barangay Graph
 
                 // Get Unique Municipal List
@@ -906,7 +908,7 @@ class Dashboard extends Controller
 
                     $extracted_ethnicity_from_sorted_list_of_ethnicity = Cases::where('region','=',Auth::user()->user_region)->select('ethnicity')->groupBy('ethnicity')->get();
                 }
-                
+
 
                 // Data for GBV Cases Reporting per Month Graph
 
@@ -969,7 +971,7 @@ class Dashboard extends Controller
                 $sexual_harassment = Cases::where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('nature_of_incidence', 'like', '%Sexual Harassment%')->get()->count();
                 $child_abuse_exploitation_and_discrimination = Cases::where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('nature_of_incidence', 'like', '%Child Abuse, Exploitation and Discrimination%')->get()->count();
 
-                
+
                 // Data Total GBV Cases Reporting per Province Graph
 
                 // Get Unique Region List
@@ -1001,7 +1003,7 @@ class Dashboard extends Controller
                     $extracted_municipality_from_sorted_list_of_municipality = Cases::where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->select('city')->groupBy('city')->get();
                 }
 
-                
+
                 // Data Total GBV Cases Reporting per Barangay Graph
 
                 // Get Unique Municipal List
@@ -1028,7 +1030,7 @@ class Dashboard extends Controller
 
                     $extracted_ethnicity_from_sorted_list_of_ethnicity = Cases::where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->select('ethnicity')->groupBy('ethnicity')->get();
                 }
-                
+
 
                 // Data for GBV Cases Reporting per Month Graph
 
@@ -1092,7 +1094,7 @@ class Dashboard extends Controller
                 $sexual_harassment = Cases::where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('city','=',Auth::user()->user_municipality)->where('nature_of_incidence', 'like', '%Sexual Harassment%')->get()->count();
                 $child_abuse_exploitation_and_discrimination = Cases::where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('city','=',Auth::user()->user_municipality)->where('nature_of_incidence', 'like', '%Child Abuse, Exploitation and Discrimination%')->get()->count();
 
-                
+
                 // Data Total GBV Cases Reporting per Province Graph
 
                 // Get Unique Region List
@@ -1124,7 +1126,7 @@ class Dashboard extends Controller
                     $extracted_municipality_from_sorted_list_of_municipality = Cases::where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('city','=',Auth::user()->user_municipality)->select('city')->groupBy('city')->get();
                 }
 
-                
+
                 // Data Total GBV Cases Reporting per Barangay Graph
 
                 // Get Unique Municipal List
@@ -1151,7 +1153,7 @@ class Dashboard extends Controller
 
                     $extracted_ethnicity_from_sorted_list_of_ethnicity = Cases::where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('city','=',Auth::user()->user_municipality)->select('ethnicity')->groupBy('ethnicity')->get();
                 }
-                
+
 
                 // Data for GBV Cases Reporting per Month Graph
 
@@ -1216,7 +1218,7 @@ class Dashboard extends Controller
                 $sexual_harassment = Cases::where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('city','=',Auth::user()->user_municipality)->where('barangay','=',Auth::user()->user_barangay)->where('nature_of_incidence', 'like', '%Sexual Harassment%')->get()->count();
                 $child_abuse_exploitation_and_discrimination = Cases::where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('city','=',Auth::user()->user_municipality)->where('barangay','=',Auth::user()->user_barangay)->where('nature_of_incidence', 'like', '%Child Abuse, Exploitation and Discrimination%')->get()->count();
 
-                
+
                 // Data Total GBV Cases Reporting per Province Graph
 
                 // Get Unique Region List
@@ -1248,7 +1250,7 @@ class Dashboard extends Controller
                     $extracted_municipality_from_sorted_list_of_municipality = Cases::where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('city','=',Auth::user()->user_municipality)->where('barangay','=',Auth::user()->user_barangay)->select('city')->groupBy('city')->get();
                 }
 
-                
+
                 // Data Total GBV Cases Reporting per Barangay Graph
 
                 // Get Unique Municipal List
@@ -1275,7 +1277,7 @@ class Dashboard extends Controller
 
                     $extracted_ethnicity_from_sorted_list_of_ethnicity = Cases::where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('city','=',Auth::user()->user_municipality)->where('barangay','=',Auth::user()->user_barangay)->select('ethnicity')->groupBy('ethnicity')->get();
                 }
-                
+
 
                 // Data for GBV Cases Reporting per Month Graph
 
@@ -1325,7 +1327,7 @@ class Dashboard extends Controller
             }
         }
 
-        
+
         // Detect User Role Page Access for Page Restriction
 
         $list_roles_page_access = UserRole::pluck('page_access','role_name');
@@ -1346,13 +1348,13 @@ class Dashboard extends Controller
                                                 'trafficking_in_person',
                                                 'sexual_harassment',
                                                 'child_abuse_exploitation_and_discrimination',
-                                                'cases_data', 
-                                                'january', 
-                                                'febuary', 
-                                                'march', 
-                                                'april', 
-                                                'may', 
-                                                'june', 
+                                                'cases_data',
+                                                'january',
+                                                'febuary',
+                                                'march',
+                                                'april',
+                                                'may',
+                                                'june',
                                                 'july',
                                                 'august',
                                                 'september',
@@ -1380,6 +1382,6 @@ class Dashboard extends Controller
                                                 'extracted_barangay_from_sorted_list_of_barangay'
                                             ))->render();
         }
-        
+
     }
 }

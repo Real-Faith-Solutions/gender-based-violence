@@ -108,7 +108,11 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="modal-title">Edit Religions</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="height:10px">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+        </button>
       </div>
       <div class="modal-body">
         <div class="row">

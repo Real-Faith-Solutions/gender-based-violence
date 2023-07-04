@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Outer Row -->
-<div class="row justify-content-center">
+<div class="row justify-content-center mt-5 pt-5" style="height: 82vh; margin:auto;">
     <div class="col-xl-7 col-lg-12 col-md-9">
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
@@ -25,7 +25,7 @@
                                 <p class="mb-4">{{ $message_status }}.</p>
                             </div>
                             <form class="user" action="{{ env('APP_URL') }}forgot-password">
-                                @csrf 
+                                @csrf
                                 <div class="form-group">
                                     <input type="email" class="form-control form-control-user" name="email" value="{{ $email }}" aria-describedby="emailHelp" placeholder="Enter Email Address...">
                                 </div>
@@ -70,11 +70,11 @@
 
                             <div class="text-center">
                                 <p>{{ $message_status }}</p>
-                                <h1 class="h4 text-gray-900 mb-2">Forgot your Password?</h1>
+                                <h1 class="h4 text-gray-900 mb-2 text-sm-bold">Forgot your Password?</h1>
                                 <p class="mb-4">We get it, stuff happens. Just enter your email address below and we'll send you a link to reset your password!</p>
                             </div>
                             <form class="user" action="{{ env('APP_URL') }}forgot-password">
-                                @csrf 
+                                @csrf
                                 <div class="form-group">
                                     <input type="email" class="form-control form-control-user" name="email" aria-describedby="emailHelp" placeholder="Enter Email Address...">
                                 </div>

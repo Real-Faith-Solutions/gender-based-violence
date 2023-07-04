@@ -67,11 +67,15 @@
 
 <div class="modal fade" id="modalPlaceOfIncidence" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <form class="modal-dialog modal-md" method="POST" id="modalPlaceOfIncidenceForm" action="javascript:void(0);" onsubmit="submitForm()">
-    @csrf  
+    @csrf
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="modal-title">Add Place of Incidence</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="height:10px">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+        </button>
       </div>
       <div class="modal-body">
         <div class="row">
@@ -86,10 +90,10 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-orange rounded">Save Changes</button>
-      </div>   
+      </div>
       <center id="error-form" class="col mt-3 mb-3">
       {{-- Result portion for Errors in Form from submit form using Sweet Alert script below --}}
-      </center>   
+      </center>
     </div>
   </form>
 </div>
@@ -120,7 +124,7 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-orange rounded" id="edit_save_button">Save Changes</button>
-      </div> 
+      </div>
       <center id="edit-error-form" class="col mt-3 mb-3">
       {{-- Result portion for Errors in Form from submit form using Sweet Alert script below --}}
       </center>
@@ -186,7 +190,7 @@ function submitForm(){
       }
   });
 
-}  
+}
 </script>
 
 <!-- End of Submit Form using Sweet Alert -->
@@ -232,7 +236,7 @@ function submitEditForm($id){
       }
   });
 
-}  
+}
 </script>
 
 <!-- End of Submit Edit Form using Sweet Alert -->

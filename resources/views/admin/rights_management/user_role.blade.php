@@ -50,20 +50,20 @@
                             <td>{{$userrights->role_name ?? '-'}}</td>
                             <td>
                                 @foreach(explode(',',$userrights->page_access) as $pageaccess)
-                                
+
                                     @if(!empty($pageaccess))
                                     <li>{{$pageaccess}}</li>
                                     @endif
-                                
-                                @endforeach    
+
+                                @endforeach
                             </td>
                             <td>
                                 @foreach(explode(',',$userrights->master_list_rights) as $masterlistrights)
-                               
+
                                     @if(!empty($masterlistrights))
                                     <li>{{$masterlistrights}}</li>
                                     @endif
-                              
+
                                 @endforeach
                             </td>
                         </tr>
@@ -90,7 +90,11 @@
       <div class="modal-content">
         <div class="modal-header">
             <h5 class="modal-title" id="modal-title">Add User Role</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="height:10px">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+            </button>
         </div>
         <div class="modal-body">
             <center id="error-form">
@@ -163,7 +167,7 @@
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Close</button>
             <button type="button" class="btn btn-orange rounded" onclick="submitForm()">Save Changes</button>
-        </div>   
+        </div>
       </div>
     </form>
 </div>
@@ -225,7 +229,7 @@ function submitForm(){
         denyButtonText: `Don't save`,
     }).then((result) => {
         if (result.isConfirmed) {
-            
+
             $.ajax({
                 type: "POST",
                 url: '{{ env('APP_URL') }}api/v1/user-role/add',

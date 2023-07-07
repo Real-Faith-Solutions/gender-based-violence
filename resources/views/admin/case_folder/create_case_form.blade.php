@@ -93,13 +93,13 @@
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col"><span><p class="card-text">Birthdate<span class="asterisk">*</span></p></span>
-                                            <input type="date" name="birth_date" class="w-100 date text-box form-control" />
+                                            <input type="date" name="birth_date" class="w-50 date text-box form-control" />
                                         </div>
                                         <div class="col"><span><p class="card-text">Age<span class="asterisk">*</span></p></span>
-                                            <input type="number" name="age" placeholder="" max="150" class="w-100 form-control" />
+                                            <input type="number" name="age" placeholder="" max="150" class="w-50 form-control" />
                                         </div>
                                         <div class="col"><span><p class="card-text">Civil Status<span class="asterisk">*</span></p></span>
-                                            <select name="civil_status" aria-aria-controls='example' class="date-picker w-100 form-control">
+                                            <select name="civil_status" aria-aria-controls='example' class="date-picker w-50 form-control">
                                                 <option value="">Please Select</option>
                                                 <option value="Single">Single</option>
                                                 <option value="Legally Married">Legally Married</option>
@@ -190,25 +190,19 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col-md-3"><span><p class="card-text">Current Address</p></span></div>
+                                        <div class="col-md-3"><span><p class="card-text"><b>Current Address</b></p></span></div>
                                     </div>
+
+                                    {{-- position streeet --}}
                                     <div class="row mb-3">
-                                        <div class="col"><span><p class="card-text">Household No.</p></span>
-                                            <input type="text" name="house_hold_no" class="form-control" />
-                                        </div>
-                                        <div class="col"><span><p class="card-text">Street</p></span>
-                                            <input type="text" name="street" class="w-100 form-control" />
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col"><span><p class="card-text">Region<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">Region</p></span>
                                             <select id="region" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 <option value="">Please Select</option>
                                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                                             </select>
                                             <input type="hidden" id="region_id" name="region"/>
                                         </div>
-                                        <div class="col"><span><p class="card-text">Province<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">Province</p></span>
                                             <select id="province" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                                             </select>
@@ -216,17 +210,23 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                         <div class="col"><span><p class="card-text">City/Municipality<span class="asterisk">*</span></p></span>
+                                         <div class="col"><span><p class="card-text">City/Municipality</p></span>
                                             <select id="city" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                                             </select>
                                             <input type="hidden" id="city_id" name="city"/>
                                         </div>
-                                        <div class="col"><span><p class="card-text">Barangay<span class="asterisk">*</span></p></span>
+
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col"><span><p class="card-text">Barangay</p></span>
                                             <select id="barangay" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                                             </select>
                                             <input type="hidden" id="barangay_id" name="barangay"/>
+                                            <div class=""><span><p class="card-text">Street</p></span>
+                                                <input type="text" name="street" class="w-100 form-control" />
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
@@ -354,7 +354,7 @@
                                         </div>
                                     </div>
                                     <input type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#fam_back_modal" value="Add Multiple Record" />
-                                   
+
                                     <hr class="bg-dark my-3" />
                                     <div class="card-header">
                                         <span class="card-title h6 font-weight-bold">Additional Family Background Table</span>
@@ -703,7 +703,7 @@
                                     </div>
 
                                     <input type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalIncidenceDetails" value="Add Multiple Record" />
-                                    
+
                                     <hr class="bg-dark my-3" />
                                     <div class="card-header">
                                         <span class="card-title h6 font-weight-bold">Additional Incidence Details Table</span>
@@ -760,7 +760,7 @@
                                     <div class="row mb-3">
                                         <div class="col">
                                             <span><p class="card-text">Extension</p></span>
-                                            <input type="text" class="w-50 form-control" name="perp_d_extension_name" />
+                                            <input type="text" class="form-control"  name="perp_d_extension_name" />
                                         </div>
                                         <div class="col">
                                             <span><p class="card-text">Nickname/Alias</p></span>
@@ -1156,7 +1156,7 @@
                                             <input type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalInterventionModuleInfos" value="Add Multiple Intervention" />
                                         </div>
                                     </div>
-                                    
+
                                     <hr class="bg-dark my-3" />
                                     <div class="card-header">
                                         <span class="card-title h6 font-weight-bold">Recommendation Intervention Program Plan Table</span>
@@ -2038,7 +2038,7 @@
 
 <div class="modal fade" tabindex="-1" id="modalInterventionModuleInfos" aria-labelledby='modal-title' aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
     <form class="user row" id="addInterventionModulenfos" method="POST" action="javascript:void(0);" onsubmit="submitAdditionalInterventionModuleForm()">
-    @csrf    
+    @csrf
         <div class="modal-dialog modal-xl" style="width: 100%">
             <div class="modal-content">
                 <div class="modal-header">
@@ -2220,7 +2220,7 @@
                 <div class="wrapper" style="width: 430px; padding: 30px; background: #fff; border-radius: 5px; align-items: center; justify-content: center;">
                     <header style="color: #eb6c60; font-size: 27px; font-weight: 600; text-align: center;">Upload Files</header>
                     <!-- <center >    -->
-                    <form id="upload_file_form" action="#" style="display: flex; margin: 30px 0; align-items: center; flex-direction: column; border-radius: 5px; border-style: dashed; border-width: 2px; border-color: #eb6c60;"> 
+                    <form id="upload_file_form" action="#" style="display: flex; margin: 30px 0; align-items: center; flex-direction: column; border-radius: 5px; border-style: dashed; border-width: 2px; border-color: #eb6c60;">
                         <input type="file" class="file-input" id="file" name="file" hidden/>
                         <i class="fa fa-cloud-upload-alt" style="color: #eb6c60; font-size: 50px; margin-top: 15px;"></i>
                         <p style="color: #eb6c60; font-size: 16px; margin-top: 15px;">Browse File to upload</p>

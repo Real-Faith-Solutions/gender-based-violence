@@ -3,10 +3,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="fs-4 fw-bold me-2">Dashboard <span class="text-primary">({{ App\Http\Controllers\ProfileController::userScopingStatus(); }})</span></h1>
+        <h1 class="fs-4 fw-bold me-2">Dashboard</h1>
     </div>
 
-    
+
     <div class="card p-4 shadow-lg mb-3">
         <div class="row">
             <div class="col-md">
@@ -44,12 +44,12 @@
                         <span class="input-group-text">Date From:</span>
                     </div>
                     <input type="date" name="date_from_sort_province" class="form-control" value="{{ (!empty($date_from_sort_province)) ? $date_from_sort_province : '' }}" required/>
-                    
+
                     <div class="input-group-prepend">
                         <span class="input-group-text">Date To:</span>
                     </div>
                     <input type="date" name="date_to_sort_province" class="form-control" value="{{ (!empty($date_to_sort_province)) ? $date_to_sort_province : '' }}" required/>
-                    
+
                     <div class="input-group-prepend">
                         <span class="input-group-text">Region:</span>
                     </div>
@@ -70,7 +70,7 @@
             <script>
             @if(str_contains(Auth::user()->role, "Service Provider") == true)
                 @if(!empty($date_from_sort_province) && !empty($date_to_sort_province) && !empty($region_name_for_sort_province))
-                
+
                 var xValues = [@foreach($extracted_province_from_sorted_list_of_province as $extracted_province) "{{ $extracted_province->province }}", @endforeach];
                 @if(App\Http\Controllers\ProfileController::userScopingStatus() == 'National Level')
 
@@ -110,7 +110,7 @@
                 @endif
             @else
                 @if(!empty($date_from_sort_province) && !empty($date_to_sort_province) && !empty($region_name_for_sort_province))
-                
+
                 var xValues = [@foreach($extracted_province_from_sorted_list_of_province as $extracted_province) "{{ $extracted_province->province }}", @endforeach];
                 @if(App\Http\Controllers\ProfileController::userScopingStatus() == 'National Level')
 
@@ -187,12 +187,12 @@
                         <span class="input-group-text">Date From:</span>
                     </div>
                     <input type="date" name="date_from_sort_municipality" class="form-control" value="{{ (!empty($date_from_sort_municipality)) ? $date_from_sort_municipality : '' }}" required/>
-                
+
                     <div class="input-group-prepend">
                         <span class="input-group-text">Date To:</span>
                     </div>
                     <input type="date" name="date_to_sort_municipality" class="form-control" value="{{ (!empty($date_to_sort_municipality)) ? $date_to_sort_municipality : '' }}" required/>
-                    
+
                     <div class="input-group-prepend">
                         <span class="input-group-text">Province:</span>
                     </div>
@@ -202,11 +202,11 @@
                         <option value="{{ $province->province }}" {{ ($province_name_for_sort_municipality == $province->province) ? 'selected' : '' }}>{{ $province->province }}</option>
                         @endforeach
                     </select>
-                    
+
                     <div class="input-group-append">
                         <button class="btn btn-primary" type="submit" id="search_municipality"><i class="fas fa-search fa-sm"></i></button>
                     </div>
-                </div>    
+                </div>
             </form>
         </div>
         <div class="row justify-content-center">
@@ -214,7 +214,7 @@
             <script>
             @if(str_contains(Auth::user()->role, "Service Provider") == true)
                 @if(!empty($date_from_sort_municipality) && !empty($date_to_sort_municipality) && !empty($province_name_for_sort_municipality))
-                
+
                 var xValues = [@foreach($extracted_municipality_from_sorted_list_of_municipality as $extracted_municipality) "{{ $extracted_municipality->city }}", @endforeach];
                 @if(App\Http\Controllers\ProfileController::userScopingStatus() == 'National Level')
 
@@ -252,9 +252,9 @@
                 var yValues = [@foreach($extracted_municipality_from_sorted_list_of_municipality as $extracted_municipality) "{{  App\Models\Cases::where('im_serv_prov','=',Auth::user()->user_service_provider)->where('region','=',Auth::user()->user_region)->where('province','=',Auth::user()->user_province)->where('barangay','=',Auth::user()->user_barangay)->where('city','=',$extracted_municipality->city)->count() }}", @endforeach];
                 @endif
                 @endif
-            @else    
+            @else
                 @if(!empty($date_from_sort_municipality) && !empty($date_to_sort_municipality) && !empty($province_name_for_sort_municipality))
-                
+
                 var xValues = [@foreach($extracted_municipality_from_sorted_list_of_municipality as $extracted_municipality) "{{ $extracted_municipality->city }}", @endforeach];
                 @if(App\Http\Controllers\ProfileController::userScopingStatus() == 'National Level')
 
@@ -294,7 +294,7 @@
                 @endif
             @endif
 
-                var barColors = '#92a8d1';  
+                var barColors = '#92a8d1';
                 new Chart("municipalityChart", {
                 type: "bar",
                 data: {
@@ -330,12 +330,12 @@
                         <span class="input-group-text">Date From:</span>
                     </div>
                     <input type="date" name="date_from_sort_barangay" class="form-control" value="{{ (!empty($date_from_sort_barangay)) ? $date_from_sort_barangay : '' }}" required/>
-                
+
                     <div class="input-group-prepend">
                         <span class="input-group-text">Date To:</span>
                     </div>
                     <input type="date" name="date_to_sort_barangay" class="form-control" value="{{ (!empty($date_to_sort_barangay)) ? $date_to_sort_barangay : '' }}" required/>
-                    
+
                     <div class="input-group-prepend">
                         <span class="input-group-text">City:</span>
                     </div>
@@ -345,11 +345,11 @@
                         <option value="{{ $city->city }}" {{ ($city_name_for_sort_barangay == $city->city) ? 'selected' : '' }}>{{ $city->city }}</option>
                         @endforeach
                     </select>
-                    
+
                     <div class="input-group-append">
                         <button class="btn btn-primary" type="submit" id="search_barangay"><i class="fas fa-search fa-sm"></i></button>
                     </div>
-                </div>    
+                </div>
             </form>
         </div>
         <div class="row justify-content-center">
@@ -357,7 +357,7 @@
             <script>
             @if(str_contains(Auth::user()->role, "Service Provider") == true)
                 @if(!empty($date_from_sort_barangay) && !empty($date_to_sort_barangay) && !empty($city_name_for_sort_barangay))
-                
+
                 var xValues = [@foreach($extracted_barangay_from_sorted_list_of_barangay as $extracted_barangay) "{{ $extracted_barangay->barangay }}", @endforeach];
                 @if(App\Http\Controllers\ProfileController::userScopingStatus() == 'National Level')
 
@@ -397,7 +397,7 @@
                 @endif
             @else
                 @if(!empty($date_from_sort_barangay) && !empty($date_to_sort_barangay) && !empty($city_name_for_sort_barangay))
-                
+
                 var xValues = [@foreach($extracted_barangay_from_sorted_list_of_barangay as $extracted_barangay) "{{ $extracted_barangay->barangay }}", @endforeach];
                 @if(App\Http\Controllers\ProfileController::userScopingStatus() == 'National Level')
 
@@ -437,7 +437,7 @@
                 @endif
             @endif
 
-                var barColors = '#92a8d1';  
+                var barColors = '#92a8d1';
                 new Chart("barangayChart", {
                 type: "bar",
                 data: {
@@ -473,16 +473,16 @@
                         <span class="input-group-text">Date From:</span>
                     </div>
                     <input type="date" name="date_from_sort_ethnicity" class="form-control" value="{{ (!empty($date_from_sort_ethnicity)) ? $date_from_sort_ethnicity : '' }}" required/>
-                    
+
                     <div class="input-group-prepend">
                         <span class="input-group-text">Date To:</span>
                     </div>
                     <input type="date" name="date_to_sort_ethnicity" class="form-control" value="{{ (!empty($date_to_sort_ethnicity)) ? $date_to_sort_ethnicity : '' }}" required/>
-                    
+
                     <div class="input-group-append">
                         <button class="btn btn-primary" type="submit" id="search_ethnicity"><i class="fas fa-search fa-sm"></i></button>
-                    </div>    
-                </div>  
+                    </div>
+                </div>
             </form>
         </div>
         <div class="row justify-content-center">
@@ -490,7 +490,7 @@
             <script>
             @if(str_contains(Auth::user()->role, "Service Provider") == true)
                 @if(!empty($date_from_sort_ethnicity) && !empty($date_to_sort_ethnicity))
-                
+
                 var xValues = [@foreach($extracted_ethnicity_from_sorted_list_of_ethnicity as $extracted_ethnicity) "{{ $extracted_ethnicity->ethnicity }}", @endforeach];
                 @if(App\Http\Controllers\ProfileController::userScopingStatus() == 'National Level')
 
@@ -530,7 +530,7 @@
                 @endif
             @else
                 @if(!empty($date_from_sort_ethnicity) && !empty($date_to_sort_ethnicity))
-                
+
                 var xValues = [@foreach($extracted_ethnicity_from_sorted_list_of_ethnicity as $extracted_ethnicity) "{{ $extracted_ethnicity->ethnicity }}", @endforeach];
                 @if(App\Http\Controllers\ProfileController::userScopingStatus() == 'National Level')
 
@@ -570,7 +570,7 @@
                 @endif
             @endif
 
-                var barColors = '#92a8d1'; 
+                var barColors = '#92a8d1';
                 new Chart("ethnicityChart", {
                 type: "bar",
                 data: {
@@ -842,10 +842,10 @@
         </div>
         <div class="row justify-content-center">
             <canvas id="casemonthChart" style="width:100%; max-width:800px;">{{-- CASES PER MONTH BARCHART --}}</canvas>
-            <script>      
-                var xValues = ["January","February","March","April","May","June","July","August","September","October","November","December", ]; 
+            <script>
+                var xValues = ["January","February","March","April","May","June","July","August","September","October","November","December", ];
                 var yValues = [{{ $january }}, {{ $febuary }}, {{ $march }}, {{ $april }}, {{ $may }}, {{ $june }}, {{ $july }}, {{ $august }}, {{ $september }}, {{ $october }}, {{ $november}}, {{ $december }}];
-                var barColors = '#92a8d1'; 
+                var barColors = '#92a8d1';
                 new Chart("casemonthChart", {
                 type: "bar",
                 data: {

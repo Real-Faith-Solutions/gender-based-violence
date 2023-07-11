@@ -48,13 +48,13 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col"><span><p class="card-text">Date of Intake<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">Date of Intake</p></span>
                                             <input type="date" name="date_of_intake" class="w-100 date text-box form-control" />
                                         </div>
-                                        <div class="col"><span><p class="card-text">Case No.<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">Case No.</p></span>
                                             <input type="text" id="case_no" name="case_no" placeholder="" class="w-100 form-control"/>
                                         </div>
-                                        <div class="col"><span><p class="card-text">Type of Client<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">Type of Client</p></span>
                                             <select name="type_of_client" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 <option value="">Please Select</option>
                                                 <option value="Walk-In">Walk-In</option>
@@ -66,13 +66,13 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col"><span><p class="card-text">Last Name<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">Last Name</p></span>
                                             <input type="text" name="last_name" placeholder="Last name" class="w-100 form-control" />
                                         </div>
-                                        <div class="col"><span><p class="card-text">First Name<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">First Name</p></span>
                                             <input type="text" name="first_name" placeholder="First name" class="w-100 form-control" />
                                         </div>
-                                        <div class="col"><span><p class="card-text">Middle Name<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">Middle Name</p></span>
                                             <input type="text" name="middle_name" placeholder="Middle name" class="w-100 form-control" />
                                         </div>
                                     </div>
@@ -83,7 +83,7 @@
                                         <div class="col"><span><p class="card-text">Nickname/Alias</p></span>
                                             <input type="text" name="alias_name" placeholder="" class="w-100 form-control" />
                                         </div>
-                                        <div class="col"><span><p class="card-text">Sex<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">Sex</p></span>
                                             <select name="sex" aria-aria-controls='example' class="date-picker w-50 form-control">
                                                 <option value="">Please Select</option>
                                                 <option value="Male">Male</option>
@@ -92,13 +92,13 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col"><span><p class="card-text">Birthdate<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">Birthdate</p></span>
                                             <input type="date" name="birth_date" class="w-50 date text-box form-control" />
                                         </div>
-                                        <div class="col"><span><p class="card-text">Age<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">Age</p></span>
                                             <input type="number" name="age" placeholder="" max="150" class="w-50 form-control" />
                                         </div>
-                                        <div class="col"><span><p class="card-text">Civil Status<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">Civil Status</p></span>
                                             <select name="civil_status" aria-aria-controls='example' class="date-picker w-50 form-control">
                                                 <option value="">Please Select</option>
                                                 <option value="Single">Single</option>
@@ -112,14 +112,14 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col"><span><p class="card-text">Is the client a person with diverse SOGIE:<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">Is the client a person with diverse SOGIE:</p></span>
                                             <select name="client_diverse_sogie" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 <option value="">Please Select</option>
                                                 <option value="Yes">Yes</option>
                                                 <option value="No">No</option>
                                             </select>
                                         </div>
-                                        <div class="col"><span><p class="card-text">Educational Attainment:<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">Educational Attainment:</p></span>
                                             <select name="education" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 <option value="">Please Select</option>
                                                 <option value="No Formal Education">No Formal Education</option>
@@ -133,7 +133,7 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col"><span><p class="card-text">Religion<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">Religion</p></span>
                                             <select id="religion" name="religion" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 <option value="">Please Select</option>
                                                 @foreach($religions as $religion)
@@ -147,7 +147,7 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col"><span><p class="card-text">Nationality<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">Nationality</p></span>
                                             <select id="nationality" name="nationality" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 <option value="">Please Select</option>
                                                 <option value="Filipino">Filipino</option>
@@ -159,7 +159,7 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col"><span><p class="card-text">Ethnicity<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">Ethnicity</p></span>
                                             <select id="ethnicity" name="ethnicity" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 <option value="">Please Select</option>
                                                 <option value="Bisaya">Bisaya</option>
@@ -177,7 +177,7 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col"><span><p class="card-text">Employment Status:<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">Employment Status:</p></span>
                                             <select id="employment_status" name="employment_status" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 <option>Please Select</option>
                                                 <option value="Employed">Employed</option>
@@ -231,7 +231,7 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col-md-3"><span><p class="card-text">Is IDP?<span class="asterisk">*</span></p></span>
+                                        <div class="col-md-3"><span><p class="card-text">Is IDP?</p></span>
                                             <div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="radio" name="is_idp" id="is_idp_yes_radio" value="Yes" />
@@ -243,7 +243,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-3"><span><p class="card-text">Is PWD?<span class="asterisk">*</span></p></span>
+                                        <div class="col-md-3"><span><p class="card-text">Is PWD?</p></span>
                                             <div>
                                                 <div class="form-check">
                                                     <input class="form-check-input ispwd" type="radio" name="is_pwd" id="is_pwd_yes_radio" value="Yes" />
@@ -260,7 +260,7 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col-md-3"><span><p class="card-text">Contact Information:<span class="asterisk">*</span></p></span></div>
+                                        <div class="col-md-3"><span><p class="card-text">Contact Information:</p></span></div>
                                         <div class="col-md-9 form-floating">
                                             <textarea class="form-control" name="per_det_cont_info" id="floatingTextarea2"></textarea>
                                         </div>
@@ -278,7 +278,7 @@
                                 <div class="card-body">
                                     <div class="row my-3">
                                         <div class="col">
-                                            <span><p class="card-text">Name of Parent or Guardian:<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Name of Parent or Guardian:</p></span>
                                             <input type="text" class="w-50 form-control" name="name_par_guar"/>
                                         </div>
                                     </div>
@@ -293,7 +293,7 @@
                                         </div>
                                     </div>
                                     <div class="row my-3">
-                                        <div class="col"><span><p class="card-text">Relationship to the Victim-Survivor:<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">Relationship to the Victim-Survivor:</p></span>
                                             <select id="relvic" name="rel_vict_sur" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 <option value="">Please Select</option>
                                                 @foreach($relationship_to_victim_survivors as $relationship_to_victim_survivor)
@@ -409,19 +409,19 @@
                                 <div class="card-body">
 
                                     <div class="row">
-                                        <div class="col-md-4"><p class="card-text">Date of Intake:<span class="asterisk">*</span></p></div>
+                                        <div class="col-md-4"><p class="card-text">Date of Intake:</p></div>
                                         <div class="col-md-8"><input type="date" class="w-100 form-control" name="id_date_int" /></div>
                                     </div>
                                     <div class="row my-3">
-                                        <div class="col-md-4"><p class="card-text">Name of Interviewer:<span class="asterisk">*</span></p></div>
+                                        <div class="col-md-4"><p class="card-text">Name of Interviewer:</p></div>
                                         <div class="col-md-8"><input type="text" class="w-100 form-control" name="id_name_intervi" /></div>
                                     </div>
                                     <div class="row my-3">
-                                        <div class="col-md-4"><p class="card-text">Position/Designation of Interviewer:<span class="asterisk">*</span></p></div>
+                                        <div class="col-md-4"><p class="card-text">Position/Designation of Interviewer:</p></div>
                                         <div class="col-md-8"><input type="text" class="w-100 form-control" name="id_pos_desi_int" /></div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col-md-3"><span><p class="card-text">Nature of Incidence:<span class="asterisk">*</span></p></span></div>
+                                        <div class="col-md-3"><span><p class="card-text">Nature of Incidence:</p></span></div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col">
@@ -599,13 +599,13 @@
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_chi_abu_neglected" value="Sexual Intercourse" id="flexCheckChecked" disabled/>
+                                                <input class="form-check-input" type="checkbox" name="id_chi_abu_neglected" value="Neglected" id="flexCheckChecked" disabled/>
                                                 <label class="form-check-label" for="flexCheckChecked">
                                                     Neglected
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_chi_abu_abandoned" value="Physical Abuse" id="flexCheckChecked" disabled/>
+                                                <input class="form-check-input" type="checkbox" name="id_chi_abu_abandoned" value="Abandoned" id="flexCheckChecked" disabled/>
                                                 <label class="form-check-label" for="flexCheckChecked">
                                                     Abandoned
                                                 </label>
@@ -619,7 +619,7 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col"><span><p class="card-text">Date of Incidence:<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">Date of Incidence:</p></span>
                                             <input type="date" class="w-100 form-control" name="id_date_of_inci" />
                                         </div>
                                         <div class="col"><span><p class="card-text">Time of Incident:</p></span>
@@ -662,7 +662,7 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col"><span><p class="card-text">Place of Incidence:<span class="asterisk">*</span></p></span>
+                                        <div class="col"><span><p class="card-text">Place of Incidence:</p></span>
                                             <select id="placeinci" name="id_pla_of_inci" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 <option value="">Please Select</option>
                                                 @foreach($place_of_incidences as $place_of_incidence)
@@ -676,7 +676,7 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col-md-3"><p class="card-text">Was the incident Perpetuated Online?:<span class="asterisk">*</span></p></div>
+                                        <div class="col-md-3"><p class="card-text">Was the incident Perpetuated Online?:</p></div>
                                         <div class="col-md-3">
                                             <select name="id_was_inc_perp_onl" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 <option value="">Please Select</option>
@@ -729,22 +729,22 @@
                                 <div class="card-body">
                                     <div class="row mb-3">
                                         <div class="col">
-                                            <span><p class="card-text">Last Name<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Last Name</p></span>
                                             <input type="text" class="w-100 form-control" name="perp_d_last_name" />
                                         </div>
                                         <div class="col">
-                                            <span><p class="card-text">First Name<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">First Name</p></span>
                                             <input type="text" class="w-100 form-control" name="perp_d_first_name" />
                                         </div>
                                         <div class="col">
-                                            <span><p class="card-text">Middle Name<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Middle Name</p></span>
                                             <input type="text" class="w-100 form-control" name="perp_d_middle_name" />
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col">
                                             <span><p class="card-text">Extension</p></span>
-                                            <input type="text" class="form-control"  name="perp_d_extension_name" />
+                                            <input type="text" class="form-control"  name="perp_d_extension_name" style="width: 40%"/>
                                         </div>
                                         <div class="col">
                                             <span><p class="card-text">Nickname/Alias</p></span>
@@ -753,7 +753,7 @@
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-md-1">
-                                            <p class="card-text">Sex:<span class="asterisk">*</span></p>
+                                            <p class="card-text">Sex:</p>
                                         </div>
                                         <div class="col">
                                             <div>
@@ -768,17 +768,17 @@
                                             </div>
                                         </div>
                                         <div class="col-md-3">
-                                            <span><p class="card-text">Birthdate:<span class="asterisk">*</span></p></span>
-                                            <input type="date" class="w-100 form-control" name="perp_d_birthdate" />
+                                            <span><p class="card-text">Birthdate:</p></span>
+                                            <input type="date" class="form-control"  name="perp_d_birthdate" style="width: 50%" />
                                         </div>
                                         <div class="col-md-3">
-                                            <span><p class="card-text">Age:<span class="asterisk">*</span></p></span>
-                                            <input type="number" class="w-100 form-control" name="perp_d_age" />
+                                            <span><p class="card-text">Age:</p></span>
+                                            <input type="number" class="form-control" name="perp_d_age" style="width: 30%"/>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col">
-                                            <span><p class="card-text">Relationship to the Victim-Survivor:<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Relationship to the Victim-Survivor:</p></span>
                                             <select id="relvicsur" name="perp_d_rel_victim" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 <option value="">Please Select</option>
                                                 @foreach($relationship_to_victim_survivors as $relationship_to_victim_survivor)
@@ -794,11 +794,11 @@
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-md-6">
-                                            <span><p class="card-text">Occupation:<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Occupation:</p></span>
                                             <input type="text" class="w-100 form-control" name="perp_d_occup" />
                                         </div>
                                         <div class="col-md-6">
-                                            <span><p class="card-text">Educational Attainment:<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Educational Attainment:</p></span>
                                             <select name="perp_d_educ_att" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 <option value="">Please Select</option>
                                                 <option value="No Formal Education">No Formal Education</option>
@@ -814,7 +814,7 @@
                                     </div>
                                     <div class="row my-3">
                                         <div class="col">
-                                            <span><p class="card-text">Nationality<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Nationality</p></span>
                                             <select id="narelvicsur" name="perp_d_nationality" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 <option value="">Please Select</option>
                                                 <option value="Filipino">Filipino</option>
@@ -827,7 +827,7 @@
                                     </div>
                                     <div class="row my-3">
                                         <div class="col">
-                                            <span><p class="card-text">Religion<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Religion</p></span>
                                             <select id="rerelvicsur" name="perp_d_religion" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 <option value="">Please Select</option>
                                                 @foreach($religions as $religion)
@@ -843,17 +843,9 @@
                                     <div class="row mb-3">
                                         <div class="col-md-3"><span><p class="card-text">Address</p></span></div>
                                     </div>
-                                    <div class="row mb-3">
-                                        <div class="col"><span><p class="card-text">Household No.</p></span>
-                                            <input type="text" name="perp_d_house_no" class="form-control" />
-                                        </div>
-                                        <div class="col"><span><p class="card-text">Street</p></span>
-                                            <input type="text" name="perp_d_street" class="w-100 form-control" />
-                                        </div>
-                                    </div>
                                     <div class="row my-3">
                                         <div class="col">
-                                            <span><p class="card-text">Region<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Region</p></span>
                                             <select id="perp_d_region" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 <option value="">Please Select</option>
                                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
@@ -861,38 +853,44 @@
                                             <input type="hidden" id="perp_d_region_id" name="perp_d_region"/>
                                         </div>
                                         <div class="col">
-                                            <span><p class="card-text">Province<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Province</p></span>
                                             <select id="perp_d_province" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                                             </select>
                                             <input type="hidden" id="perp_d_province_id" name="perp_d_province"/>
                                         </div>
-                                    </div>
-                                    <div class="row my-3">
                                         <div class="col">
-                                            <span><p class="card-text">City/Municipality<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">City/Municipality</p></span>
                                             <select id="perp_d_city" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                                             </select>
                                             <input type="hidden" id="perp_d_city_id" name="perp_d_city"/>
                                         </div>
+                                    </div>
+                                    <div class="row my-3">
+
                                         <div class="col">
-                                            <span><p class="card-text">Barangay<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Barangay</p></span>
                                             <select id="perp_d_barangay" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                                             </select>
                                             <input type="hidden" id="perp_d_barangay_id" name="perp_d_barangay"/>
                                         </div>
-                                    </div>
-                                    <div class="row my-3">
+
                                         <div class="col">
-                                            <span><p class="card-text">Current Location<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Current Location</p></span>
                                             <input type="text" class="w-100 form-control" name="perp_d_curr_loc" />
+                                        </div>
+                                        <div class="col"><span><p class="card-text">Street</p></span>
+                                            <input type="text" name="perp_d_street" class="w-100 form-control" />
                                         </div>
                                     </div>
                                     <div class="row my-3">
+
+                                    </div>
+                                    <div class="row my-3">
                                         <div class="col">
-                                            <p class="card-text">Is Perpetrator Minor?:<span class="asterisk">*</span></p>
+                                            <p class="card-text">Is Perpetrator Minor?:</p>
                                         </div>
                                         <div class="col">
                                             <div>
@@ -913,19 +911,19 @@
                                     </div>
                                     <div class="row my-3">
                                         <div class="col">
-                                            <span><p class="card-text">Address of parent/guardian:<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Address of parent/guardian:</p></span>
                                             <input type="text" class="w-100 form-control" name="perp_d_addr_par_gua" />
                                         </div>
                                     </div>
                                     <div class="row my-3">
                                         <div class="col-md-5">
-                                            <span><p class="card-text">Contact number of parent/guardian:<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Contact number of parent/guardian:</p></span>
                                             <input type="text" class="w-100 form-control" name="perp_d_cont_par_gua" />
                                         </div>
                                     </div>
                                     <div class="row my-3">
                                         <div class="col">
-                                            <span><p class="card-text">Relationship of guardian to Perpetrator:<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Relationship of guardian to Perpetrator:</p></span>
                                             <select id="garrelvicsur" name="perp_d_rel_guar_perp" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 <option value="">Please Select</option>
                                                 <option value="Father">Father</option>
@@ -992,7 +990,7 @@
                                 <div class="card-body">
                                     <div class="row my-3">
                                         <div class="col">
-                                            <span><p class="card-text">Type of Service<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Type of Service</p></span>
                                             <select id="im_type_of_service" name="im_type_of_service" aria-aria-controls='example' class="date-picker w-100 form-control typeofservice">
                                                 <option value="">Please Select</option>
                                                 {{-- Drop-down list on this select option is in the "public/js/scripts.js" file --}}
@@ -1005,7 +1003,7 @@
                                     </div>
                                     <div class="row my-3">
                                         <div class="col">
-                                            <span><p class="card-text">Specific Interventions: (Select Type of Service first)<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Specific Interventions: (Select Type of Service first)</p></span>
                                             <select id="im_speci_interv" name="im_speci_interv" aria-aria-controls='example' class="date-picker w-100 form-control speInt">
                                                 <option value="">Please Select</option>
                                                 {{-- Drop-down list on this select option is in the "public/js/scripts.js" file --}}
@@ -1018,7 +1016,7 @@
                                     </div>
                                     <div class="row my-3">
                                         <div class="col">
-                                            <span><p class="card-text">Service Provider:<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Service Provider:</p></span>
                                             <select id="serviceprovider" name="im_serv_prov" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 <option value="">Please Select</option>
                                                 @foreach($service_providers as $service_provider)
@@ -1034,17 +1032,17 @@
                                     </div>
                                     <div class="row my-3">
                                         <div class="col">
-                                            <span><p class="card-text">Specific Objective<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Specific Objective</p></span>
                                             <textarea type="text" class="w-100 form-control" name="im_speci_obje" rows="4"></textarea>
                                         </div>
                                     </div>
                                     <div class="row my-3">
                                         <div class="col">
-                                            <span><p class="card-text">Target Date<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Target Date</p></span>
                                             <input type="date" class="w-100 form-control" name="im_target_date" />
                                         </div>
                                         <div class="col">
-                                            <span><p class="card-text">Status<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Status</p></span>
                                             <select name="im_status" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 <option value="">Please Select</option>
                                                 <option value="Provided">Provided</option>
@@ -1064,24 +1062,24 @@
                                     </div>
                                     <div class="row my-3">
                                         <div class="col">
-                                            <span><p class="card-text">Full Name<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Full Name</p></span>
                                             <select id="im_dsp_full_name" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 {{-- Data on this part are manipulated by js/scripts.js --}}
                                             </select>
                                             <input type="hidden" class="w-100 form-control" name="im_dsp_full_name" id="im_dsp_full_name_id"/>
                                         </div>
                                         <div class="col">
-                                            <span><p class="card-text">Position/Designation<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Position/Designation</p></span>
                                             <input type="text" class="w-100 form-control" name="im_dsp_post_desi" id="im_dsp_post_desi"/>
                                         </div>
                                         <div class="col">
-                                            <span><p class="card-text">Email<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Email</p></span>
                                             <input type="email" class="w-100 form-control" name="im_dsp_email" id="im_dsp_email"/>
                                         </div>
                                     </div>
                                     <div class="row my-3">
                                         <div class="col">
-                                            <span><p class="card-text">1st Contact No. (Mobile)<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">1st Contact No. (Mobile)</p></span>
                                             <input type="text" class="w-100 form-control" name="im_dsp_contact_no_1" id="im_dsp_contact_no_1" />
                                         </div>
                                         <div class="col">
@@ -1131,7 +1129,7 @@
                                     </div>
                                     <div class="row my-3">
                                         <div class="col">
-                                            <span><h5 class="card-text mt-4">Summary<span class="asterisk">*</span></h5></span>
+                                            <span><h5 class="card-text mt-4">Summary</h5></span>
                                             <textarea id="im_summary" name="im_summary" rows="14" class="w-100 form-control mb-4"></textarea>
                                         </div>
                                     </div>
@@ -1188,7 +1186,7 @@
                                 <div class="card-body">
                                     <div class="row mb-3">
                                         <div class="col">
-                                            <p class="card-text">Was the client referred by other organization?:<span class="asterisk">*</span></p>
+                                            <p class="card-text">Was the Client Referred by Third Party”?:</p>
                                         </div>
                                         <div class="col">
                                             <div>
@@ -1209,7 +1207,7 @@
                                     </div>
                                     <div class="row my-3">
                                         <div class="col">
-                                            <span><p class="card-text">Name of Referring organization:</p></span>
+                                            <span><p class="card-text">Name of Referring Person or Organization:</p></span>
                                             <input type="text" class="w-100 form-control" name="rm_name_ref_org" id="rm_name_ref_org"/>
                                         </div>
                                         <div class="col">
@@ -1254,7 +1252,7 @@
                                 <div class="card-header">Case Module</div>
                                 <div class="card-body">
                                     <div class="row mb-3">
-                                        <div class="col-md-3"><p class="card-text">Case Status<span class="asterisk">*</span></p>
+                                        <div class="col-md-3"><p class="card-text">Case Status</p>
                                         </div>
                                         <div class="col">
                                             <select name="cm_case_status" aria-aria-controls='example' class="date-picker text-box w-50 form-control" >
@@ -1267,7 +1265,7 @@
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-md-3">
-                                            <p class="card-text">Assessment<span class="asterisk">*</span></p>
+                                            <p class="card-text">Assessment</p>
                                         </div>
                                         <div class="col">
                                             <textarea id="cm_assessment" name="cm_assessment" rows="14" class="w-100 form-control"></textarea>
@@ -1275,7 +1273,7 @@
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-md-3">
-                                            <p class="card-text">Recommendation<span class="asterisk">*</span></p>
+                                            <p class="card-text">Recommendation</p>
                                         </div>
                                         <div class="col">
                                             <textarea id="cm_recommendation" name="cm_recommendation" rows="14" class="w-100 form-control"></textarea>
@@ -1283,7 +1281,7 @@
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-md-3">
-                                            <p class="card-text">Remarks<span class="asterisk">*</span></p>
+                                            <p class="card-text">Progress</p>
                                         </div>
                                         <div class="col">
                                             <textarea id="cm_remarks" name="cm_remarks" rows="14" class="w-100 form-control"></textarea>
@@ -1356,21 +1354,21 @@
                 </div>
                 <div class="modal-body">
                     <div class="row my-3">
-                        <div class="col"><span><p class="card-text">Name of Parent or Guardian:<span class="asterisk">*</span></p></span>
+                        <div class="col"><span><p class="card-text">Name of Parent or Guardian:</p></span>
                         <input type="text" class="w-50 form-control" name="name_par_guar_modal" id="name_par_guar_modal" required/>
                         <input type="hidden" class="w-100 form-control" name="case_no_modal" id="fam_back_case_no_modal"/>
                         </div>
                     </div>
                     <div class="row my-3">
-                        <div class="col"><span><p class="card-text">Occupation:<span class="asterisk">*</span></p></span>
+                        <div class="col"><span><p class="card-text">Occupation:</p></span>
                         <input type="text" class="w-100 form-control" name="job_vict_sur_modal" id="job_vict_sur_modal" required/>
                         </div>
-                        <div class="col"><span><p class="card-text">Age:<span class="asterisk">*</span></p></span>
+                        <div class="col"><span><p class="card-text">Age:</p></span>
                         <input type="number" class="w-50 form-control" name="age_vict_sur_modal" id="age_vict_sur_modal" required/>
                     </div>
                     </div>
                     <div class="row my-3">
-                        <div class="col"><span><p class="card-text">Relationship to the Victim-Survivor:<span class="asterisk">*</span></p></span>
+                        <div class="col"><span><p class="card-text">Relationship to the Victim-Survivor:</p></span>
                             <select name="rel_vict_sur_modal" id="rel_vict_sur_modal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                                 <option value="">Please Select</option>
                                 @foreach($relationship_to_victim_survivors as $relationship_to_victim_survivor)
@@ -1395,14 +1393,14 @@
                         </div>
                     </div>
                     <div class="row my-3">
-                        <div class="col"><span><p class="card-text">Region<span class="asterisk">*</span></p></span>
+                        <div class="col"><span><p class="card-text">Region</p></span>
                             <select id="fam_back_region_modal"  aria-aria-controls='example' class="date-picker w-100 form-control" required>
                                 <option value="">Please Select</option>
                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                             </select>
                             <input type="hidden" id="fam_back_region_modal_id" name="fam_back_region_modal"/>
                         </div>
-                        <div class="col"><span><p class="card-text">Province<span class="asterisk">*</span></p></span>
+                        <div class="col"><span><p class="card-text">Province</p></span>
                             <select id="fam_back_province_modal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                             </select>
@@ -1410,13 +1408,13 @@
                         <input type="hidden" id="fam_back_province_modal_id" name="fam_back_province_modal"/>
                     </div>
                     <div class="row my-3">
-                        <div class="col"><span><p class="card-text">City/Municipality<span class="asterisk">*</span></p></span>
+                        <div class="col"><span><p class="card-text">City/Municipality</p></span>
                             <select id="fam_back_city_modal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                             </select>
                             <input type="hidden" id="fam_back_city_modal_id" name="fam_back_city_modal"/>
                         </div>
-                        <div class="col"><span><p class="card-text">Barangay<span class="asterisk">*</span></p></span>
+                        <div class="col"><span><p class="card-text">Barangay</p></span>
                             <select id="fam_back_barangay_modal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                             </select>
@@ -1424,7 +1422,7 @@
                         </div>
                     </div>
                     <div class="row my-3">
-                        <div class="col-md-5"><p class="card-text">Contact Number:<span class="asterisk">*</span></p>
+                        <div class="col-md-5"><p class="card-text">Contact Number:</p>
                             <input type="text" class="w-100 form-control" name="fam_back_cont_num_modal" id="fam_back_cont_num_modal" required/>
                         </div>
                     </div>
@@ -1456,20 +1454,20 @@
                 </div>
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-md-4"><p class="card-text">Date of Intake:<span class="asterisk">*</span></p></div>
+                    <div class="col-md-4"><p class="card-text">Date of Intake:</p></div>
                     <div class="col-md-8"><input type="date" class="w-100 form-control" name="id_date_int_modal" id="id_date_int_modal" required/></div>
                     <input type="hidden" class="w-100 form-control" name="case_no_modal" id="inci_det_case_no_modal"/>
                 </div>
                 <div class="row my-3">
-                    <div class="col-md-4"><p class="card-text">Name of Interviewer:<span class="asterisk">*</span></p></div>
+                    <div class="col-md-4"><p class="card-text">Name of Interviewer:</p></div>
                     <div class="col-md-8"><input type="text" class="w-100 form-control" name="id_name_intervi_modal" id="id_name_intervi_modal" required/></div>
                 </div>
                 <div class="row my-3">
-                    <div class="col-md-4"><p class="card-text">Position/Designation of Interviewer:<span class="asterisk">*</span></p></div>
+                    <div class="col-md-4"><p class="card-text">Position/Designation of Interviewer:</p></div>
                     <div class="col-md-8"><input type="text" class="w-100 form-control" name="id_pos_desi_int_modal" id="id_pos_desi_int_modal" required/></div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-md-3"><span><p class="card-text">Nature of Incidence:<span class="asterisk">*</span></p></span></div>
+                    <div class="col-md-3"><span><p class="card-text">Nature of Incidence:</p></span></div>
                 </div>
                 <div class="row mb-3">
                     <div class="col"><input type="checkbox" name="id_int_part_vio_modal" id="id_int_part_vio_modal" value="Intimate partner violence"/>
@@ -1681,13 +1679,13 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-md-3"><p class="card-text">Description of the Incident<span class="asterisk">*</span></p></div>
+                    <div class="col-md-3"><p class="card-text">Description of the Incident</p></div>
                     <div class="col-md-9 form-floating">
                         <textarea class="form-control" placeholder="Leave a comment here" name="id_descr_inci_modal" id="id_descr_inci_modal" rows="14" required></textarea>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col"><span><p class="card-text">Date of Incidence:<span class="asterisk">*</span></p></span>
+                    <div class="col"><span><p class="card-text">Date of Incidence:</p></span>
                         <input type="date" class="w-100 form-control" name="id_date_of_inci_modal" id="id_date_of_inci_modal" required/>
                     </div>
                     <div class="col"><span><p class="card-text">Time of Incident:</p></span>
@@ -1706,14 +1704,14 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col"><span><p class="card-text">Region<span class="asterisk">*</span></p></span>
+                    <div class="col"><span><p class="card-text">Region</p></span>
                         <select id="inci_det_region_modal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                             <option value="">Please Select</option>
                             {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                         </select>
                         <input type="hidden" id="inci_det_region_modal_id" name="inci_det_region_modal"/>
                     </div>
-                    <div class="col"><span><p class="card-text">Province<span class="asterisk">*</span></p></span>
+                    <div class="col"><span><p class="card-text">Province</p></span>
                         <select id="inci_det_province_modal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                             {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                         </select>
@@ -1721,13 +1719,13 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col"><span><p class="card-text">City/Municipality<span class="asterisk">*</span></p></span>
+                    <div class="col"><span><p class="card-text">City/Municipality</p></span>
                         <select id="inci_det_city_modal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                             {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                         </select>
                         <input type="hidden" id="inci_det_city_modal_id" name="inci_det_city_modal"/>
                     </div>
-                    <div class="col"><span><p class="card-text">Barangay<span class="asterisk">*</span></p></span>
+                    <div class="col"><span><p class="card-text">Barangay</p></span>
                         <select id="inci_det_barangay_modal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                             {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                         </select>
@@ -1735,7 +1733,7 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col"><span><p class="card-text">Place of Incidence:<span class="asterisk">*</span></p></span>
+                    <div class="col"><span><p class="card-text">Place of Incidence:</p></span>
                         <select name="id_pla_of_inci_modal" id="placeinciModal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                             <option value="">Please Select</option>
                             @foreach($place_of_incidences as $place_of_incidence)
@@ -1749,7 +1747,7 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-md-3"><p class="card-text">Was the incident Perpetuated Online?:<span class="asterisk">*</span></p></div>
+                    <div class="col-md-3"><p class="card-text">Was the incident Perpetuated Online?:</p></div>
                     <div class="col-md-3">
                         <select name="id_was_inc_perp_onl_modal" id="id_was_inc_perp_onl_modal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                             <option value="">Please Select</option>
@@ -1792,11 +1790,11 @@
                             <input type="hidden" class="w-100 form-control" name="case_no_modal" id="perp_det_case_no_modal" />
                         </div>
                         <div class="col">
-                            <span><p class="card-text">First Name<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">First Name</p></span>
                             <input type="text" class="w-100 form-control" name="perp_d_first_name_modal" id="perp_d_first_name_modal" required/>
                         </div>
                         <div class="col">
-                            <span><p class="card-text">Middle Name<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Middle Name</p></span>
                             <input type="text" class="w-100 form-control" name="perp_d_middle_name_modal" id="perp_d_middle_name_modal" required/>
                         </div>
                     </div>
@@ -1812,7 +1810,7 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-1">
-                            <p class="card-text">Sex:<span class="asterisk">*</span></p>
+                            <p class="card-text">Sex:</p>
                         </div>
                         <div class="col">
                             <div>
@@ -1827,17 +1825,17 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <span><p class="card-text">Birthdate:<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Birthdate:</p></span>
                             <input type="date" class="w-100 form-control" name="perp_d_birthdate_modal" id="perp_d_birthdate_modal" required/>
                         </div>
                         <div class="col-md-3">
-                            <span><p class="card-text">Age:<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Age:</p></span>
                             <input type="number" class="w-100 form-control" name="perp_d_age_modal" id="perp_d_age_modal" required/>
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col">
-                            <span><p class="card-text">Relationship to the Victim-Survivor:<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Relationship to the Victim-Survivor:</p></span>
                             <select name="perp_d_rel_victim_modal" id="relvicsurModal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                                 <option value="">Please Select</option>
                                 @foreach($relationship_to_victim_survivors as $relationship_to_victim_survivor)
@@ -1853,11 +1851,11 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-6">
-                            <span><p class="card-text">Occupation:<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Occupation:</p></span>
                             <input type="text" class="w-100 form-control" name="perp_d_occup_modal" id="perp_d_occup_modal" required/>
                         </div>
                         <div class="col-md-6">
-                            <span><p class="card-text">Educational Attainment:<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Educational Attainment:</p></span>
                             <select id="perp_d_educ_att_modal" name="perp_d_educ_att_modal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                                 <option value="">Please Select</option>
                                 <option value="No Formal Education">No Formal Education</option>
@@ -1873,7 +1871,7 @@
                     </div>
                     <div class="row my-3">
                         <div class="col">
-                            <span><p class="card-text">Nationality<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Nationality</p></span>
                             <select name="perp_d_nationality_modal" id="narelvicsurModal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                                 <option value="">Please Select</option>
                                 <option value="Filipino">Filipino</option>
@@ -1886,7 +1884,7 @@
                     </div>
                     <div class="row my-3">
                         <div class="col">
-                            <span><p class="card-text">Religion<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Religion</p></span>
                             <select name="perp_d_religion_modal" id="rerelvicsurModal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                                 <option value="">Please Select</option>
                                 @foreach($religions as $religion)
@@ -1910,7 +1908,7 @@
                     </div>
                     <div class="row my-3">
                         <div class="col">
-                            <span><p class="card-text">Region<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Region</p></span>
                             <select id="perp_d_region_modal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                                 <option value="">Please Select</option>
                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
@@ -1918,7 +1916,7 @@
                             <input type="hidden" id="perp_d_region_modal_id" name="perp_d_region_modal"/>
                         </div>
                         <div class="col">
-                            <span><p class="card-text">Province<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Province</p></span>
                             <select id="perp_d_province_modal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                             </select>
@@ -1927,14 +1925,14 @@
                     </div>
                     <div class="row my-3">
                         <div class="col">
-                            <span><p class="card-text">City/Municipality<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">City/Municipality</p></span>
                             <select id="perp_d_city_modal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                             </select>
                             <input type="hidden" id="perp_d_city_modal_id" name="perp_d_city_modal"/>
                         </div>
                         <div class="col">
-                            <span><p class="card-text">Barangay<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Barangay</p></span>
                             <select id="perp_d_barangay_modal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                             </select>
@@ -1943,13 +1941,13 @@
                     </div>
                     <div class="row my-3">
                         <div class="col">
-                            <span><p class="card-text">Current Location<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Current Location</p></span>
                             <input type="text" class="w-100 form-control" name="perp_d_curr_loc_modal" id="perp_d_curr_loc_modal" required/>
                         </div>
                     </div>
                     <div class="row my-3">
                         <div class="col">
-                            <p class="card-text">Is Perpetrator Minor?:<span class="asterisk">*</span></p>
+                            <p class="card-text">Is Perpetrator Minor?:</p>
                         </div>
                         <div class="col">
                             <div>
@@ -1970,19 +1968,19 @@
                     </div>
                     <div class="row my-3">
                         <div class="col">
-                            <span><p class="card-text">Address of parent/guardian:<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Address of parent/guardian:</p></span>
                             <input type="text" class="w-100 form-control" name="perp_d_addr_par_gua_modal" id="perp_d_addr_par_gua_modal" required/>
                         </div>
                     </div>
                     <div class="row my-3">
                         <div class="col-md-5">
-                            <span><p class="card-text">Contact number of parent/guardian:<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Contact number of parent/guardian:</p></span>
                             <input type="text" class="w-100 form-control" name="perp_d_cont_par_gua_modal" id="perp_d_cont_par_gua_modal" required/>
                         </div>
                     </div>
                     <div class="row my-3">
                         <div class="col">
-                            <span><p class="card-text">Relationship of guardian to Perpetrator:<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Relationship of guardian to Perpetrator:</p></span>
                             <select name="perp_d_rel_guar_perp_modal" id="garrelvicsurModal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                                 <option value="">Please Select</option>
                                 <option value="Father">Father</option>
@@ -2030,7 +2028,7 @@
                 <div class="modal-body">
                     <div class="row my-3">
                         <div class="col">
-                            <span><p class="card-text">Type of Service<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Type of Service</p></span>
                             <select id="im_type_of_service_modal" name="im_type_of_service_modal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                                 <option value="">Please Select</option>
                                 {{-- Drop-down list on this select option is in the "public/js/scripts.js" file --}}
@@ -2044,7 +2042,7 @@
                     </div>
                     <div class="row my-3">
                         <div class="col">
-                            <span><p class="card-text">Specific Interventions: (Select Type of Service first)<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Specific Interventions: (Select Type of Service first)</p></span>
                             <select id="im_speci_interv_modal" name="im_speci_interv_modal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                                 <option value="">Please Select</option>
                                 {{-- Drop-down list on this select option is in the "public/js/scripts.js" file --}}
@@ -2057,7 +2055,7 @@
                     </div>
                     <div class="row my-3">
                         <div class="col">
-                            <span><p class="card-text">Service Provider:<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Service Provider:</p></span>
                             <select name="im_serv_prov_modal" id="serviceproviderModal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                                 <option value="">Please Select</option>
                                 @foreach($service_providers as $service_provider)
@@ -2073,17 +2071,17 @@
                     </div>
                     <div class="row my-3">
                         <div class="col">
-                            <span><p class="card-text">Specific Objective<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Specific Objective</p></span>
                             <textarea type="text" class="w-100 form-control" name="im_speci_obje_modal" id="im_speci_obje_modal" rows="4" required></textarea>
                         </div>
                     </div>
                     <div class="row my-3">
                         <div class="col">
-                            <span><p class="card-text">Target Date<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Target Date</p></span>
                             <input type="date" class="w-100 form-control" name="im_target_date_modal" id="im_target_date_modal" required/>
                         </div>
                         <div class="col">
-                            <span><p class="card-text">Status<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Status</p></span>
                             <select name="im_status_modal" id="im_status_modal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                                 <option value="">Please Select</option>
                                 <option value="Provided">Provided</option>
@@ -2103,24 +2101,24 @@
                     </div>
                     <div class="row my-3">
                         <div class="col">
-                            <span><p class="card-text">Full Name<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Full Name</p></span>
                             <select id="im_dsp_full_name_modal" aria-aria-controls='example' class="date-picker w-100 form-control" required>
                                 {{-- Data on this part are manipulated by js/scripts.js --}}
                             </select>
                             <input type="hidden" class="w-100 form-control" name="im_dsp_full_name_modal" id="im_dsp_full_name_modal_id"/>
                         </div>
                         <div class="col">
-                            <span><p class="card-text">Position/Designation<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Position/Designation</p></span>
                             <input type="text" class="w-100 form-control" name="im_dsp_post_desi_modal" id="im_dsp_post_desi_modal" required/>
                         </div>
                         <div class="col">
-                            <span><p class="card-text">Email<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Email</p></span>
                             <input type="email" class="w-100 form-control" name="im_dsp_email_modal" id="im_dsp_email_modal" required/>
                         </div>
                     </div>
                     <div class="row my-3">
                         <div class="col">
-                            <span><p class="card-text">1st Contact No. (Mobile)<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">1st Contact No. (Mobile)</p></span>
                             <input type="text" class="w-100 form-control" name="im_dsp_contact_no_1_modal" id="im_dsp_contact_no_1_modal" required/>
                         </div>
                         <div class="col">
@@ -2170,7 +2168,7 @@
                     </div>
                     <div class="row my-3">
                         <div class="col">
-                            <span><h5 class="card-text mt-4">Summary<span class="asterisk">*</span></h5></span>
+                            <span><h5 class="card-text mt-4">Summary</h5></span>
                             <textarea id="im_summary_modal" name="im_summary_modal" rows="14" class="w-100 form-control mb-4" required></textarea>
                         </div>
                     </div>

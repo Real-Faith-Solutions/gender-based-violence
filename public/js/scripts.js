@@ -48,7 +48,7 @@ if(($('#case_no').val()) && (location.href.includes('edit-created-case'))){ // I
         $('* input').attr('readonly','readonly');
         $('* select').attr('disabled','disabled');
         $('* textarea').attr('readonly','readonly');
-  
+
       }
     }
   });
@@ -74,7 +74,7 @@ $(document).ready(function(){
       showConfirmButton: false,
       timer: 2000
     })
-    
+
     // Get case_no and deploy on modal forms on create case
 
     var caseNo = $('#case_no').val();
@@ -103,7 +103,7 @@ $(document).ready(function(){
                 showConfirmButton: false,
                 timer: 2000
               })
-            }        
+            }
         }
     });
 
@@ -488,7 +488,7 @@ $(function () {
           <input type="text" id="fam_back_barangay_id" name="fam_back_barangay" placeholder="Error Fetching PH Location" class="w-100 form-control"/>
         `);
 
-      }                                      
+      }
     });
 
     // Incidence Details
@@ -523,7 +523,7 @@ $(function () {
           <span><p class="card-text">Barangay<span class="asterisk">*</span></p></span>
           <input type="text" id="inci_det_barangay_id" name="inci_det_barangay" placeholder="Error Fetching PH Location" class="w-100 form-control"/>
         `);
-                                            
+
       }
     });
 
@@ -559,7 +559,7 @@ $(function () {
           <span><p class="card-text">Barangay<span class="asterisk">*</span></p></span>
           <input type="text" id="perp_d_barangay_id" name="perp_d_barangay" placeholder="Error Fetching PH Location" class="w-100 form-control"/>
         `);
-                                              
+
       }
     });
 
@@ -595,7 +595,7 @@ $(function () {
           <span><p class="card-text">Barangay<span class="asterisk">*</span></p></span>
           <input type="text" id="user_barangay_id" name="user_barangay" placeholder="Error Fetching PH Location" class="w-100 form-control" required/>
         `);
-                                            
+
       }
     });
 
@@ -631,7 +631,7 @@ $(function () {
           <span><p class="card-text">Barangay<span class="asterisk">*</span></p></span>
           <input type="text" id="fam_back_barangay_modal_id" name="fam_back_barangay_modal" placeholder="Error Fetching PH Location" class="w-100 form-control" required/>
         `);
-                                            
+
       }
     });
 
@@ -667,7 +667,7 @@ $(function () {
           <span><p class="card-text">Barangay<span class="asterisk">*</span></p></span>
           <input type="text" id="inci_det_barangay_modal_id" name="inci_det_barangay_modal" placeholder="Error Fetching PH Location" class="w-100 form-control" required/>
         `);
-                                              
+
       }
     });
 
@@ -703,7 +703,7 @@ $(function () {
           <span><p class="card-text">Barangay<span class="asterisk">*</span></p></span>
           <input type="text" id="perp_d_barangay_modal_id" name="perp_d_barangay_modal" placeholder="Error Fetching PH Location" class="w-100 form-control" required/>
         `);
-                                              
+
       }
     });
 });
@@ -892,19 +892,19 @@ function changeAddressOnEditCase(select_tag_region_id, select_tag_province_id, s
           $('#'+ select_tag_region_id +'').on('change', my_handlers.fill_provinces);
           $('#'+ select_tag_province_id +'').on('change', my_handlers.fill_cities);
           $('#'+ select_tag_city_id +'').on('change', my_handlers.fill_barangays);
-      
+
           $('#'+ select_tag_region_id +'').ph_locations({ 'location_type': 'regions' });
           $('#'+ select_tag_province_id +'').ph_locations({ 'location_type': 'provinces' });
           $('#'+ select_tag_city_id +'').ph_locations({ 'location_type': 'cities' });
           $('#'+ select_tag_barangay_id +'').ph_locations({ 'location_type': 'barangays' });
           $('#'+ select_tag_region_id +'').ph_locations('fetch_list');
-      
-      
+
+
           // Change select option to input box if Error fetching PH Location dropdown list
           $('#'+ select_tag_region_id +'').on('click',function(){
-      
+
             if($('#'+ select_tag_region_id +' option:selected').val() == ''){
-      
+
               $('#'+ select_tag_region_id +'').parent().empty().html(`
                 <span><p class="card-text">Region<span class="asterisk">*</span></p></span>
                 <input type="text" id="`+ select_tag_region_id +`_id" name="`+ select_tag_region_id.replace('edit_','') +`" placeholder="Error Fetching PH Location" class="w-100 form-control"/>
@@ -921,7 +921,7 @@ function changeAddressOnEditCase(select_tag_region_id, select_tag_province_id, s
                 <span><p class="card-text">Barangay<span class="asterisk">*</span></p></span>
                 <input type="text" id="`+ select_tag_barangay_id +`_id" name="`+ select_tag_barangay_id.replace('edit_','') +`" placeholder="Error Fetching PH Location" class="w-100 form-control"/>
               `);
-      
+
             }
           });
         });
@@ -940,12 +940,12 @@ function changeAddressOnEditCase(select_tag_region_id, select_tag_province_id, s
         $('#'+ select_tag_barangay_id +'').change(function(){
           $('#'+ select_tag_barangay_id +'_id').val($('#'+ select_tag_barangay_id +' option:selected').text());
         });
-        
+
     }
     });
 }
 
-// End of change address on edit Case confirmation 
+// End of change address on edit Case confirmation
 
 
 // Cascading Dropdown in Intervention Module form
@@ -1050,7 +1050,7 @@ function changeTypeOfServiceAndSpecificInterventions(type_of_service, specific_i
     $('#'+ specific_interventions +'').empty().prop('onclick', null);
 
     // Add Please Select Option
-    
+
     $('#'+ type_of_service +'').prepend('<option value="">Please Select</option>');
     $('#'+ specific_interventions +'').prepend('<option value="">Please Select</option>');
 
@@ -1086,7 +1086,7 @@ function changeTypeOfServiceAndSpecificInterventions(type_of_service, specific_i
       }
     }
 
-    
+
     var im_type_of_serviceSel = document.getElementById(type_of_service);
     var im_speci_intervSel = document.getElementById(specific_interventions);
     for (var x in im_type_of_serviceObject) {
@@ -1107,8 +1107,8 @@ function changeTypeOfServiceAndSpecificInterventions(type_of_service, specific_i
             // chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
         }
     }
-    
-      
+
+
   }
   });
 }
@@ -1384,20 +1384,20 @@ $(function() {
       if(case_form_status != 'Submitted'){
 
         // Start of disabling Perpetrator Details Relationship to the Victim-Survivor: if others input box
-      
+
         $(function() {
           $('.relVicsur').attr('readonly', 'readonly')
-      
+
           if (($('#relvicsur option:selected').val() == 'Other Relatives, Specify:') || ($('#relvicsur option:selected').val() == 'Immediate Family Members, Specify:') || ($('#relvicsur option:selected').val() == 'Stepfamily Members, Specify:')) {
-      
+
             $('#inputrelvicsur').removeAttr('readonly');
           }
-      
+
           $('#relvicsur').change(function(e) {
             var selected_type = $(this).val();
-      
+
             if ((selected_type == 'Other Relatives, Specify:') || (selected_type == 'Immediate Family Members, Specify:') || (selected_type == 'Stepfamily Members, Specify:')) {
-      
+
               $('#inputrelvicsur').removeAttr('readonly');
             }
             else if (selected_type) {
@@ -1405,24 +1405,24 @@ $(function() {
             }
           });
         });
-      
+
         // End of disabling Perpetrator Details Relationship to the Victim-Survivor: if others input box
-      
+
         // Start of disabling Perpetrator Details Nationality Others input box
-      
+
         $(function() {
           $('.narelVicsur').attr('readonly', 'readonly')
-      
+
           if ($('#narelvicsur option:selected').val() == 'Others') {
-      
+
             $('#nainputrelvicsur').removeAttr('readonly');
           }
-      
+
           $('#narelvicsur').change(function(e) {
             var selected_type = $(this).val();
-      
+
             if (selected_type == 'Others') {
-      
+
               $('#nainputrelvicsur').removeAttr('readonly');
             }
             else if (selected_type) {
@@ -1430,24 +1430,24 @@ $(function() {
             }
           });
         });
-      
+
         // End of disabling Perpetrator Details Nationality Others input box
-      
+
         // Start of disabling Perpetrator Details Religion Others input box
-      
+
         $(function() {
           $('.rerelVicsur').attr('readonly', 'readonly')
-      
+
           if ($('#rerelvicsur option:selected').val() == 'Others') {
-      
+
             $('#reinputrelvicsur').removeAttr('readonly');
           }
-      
+
           $('#rerelvicsur').change(function(e) {
             var selected_type = $(this).val();
-      
+
             if (selected_type == 'Others') {
-      
+
               $('#reinputrelvicsur').removeAttr('readonly');
             }
             else if (selected_type) {
@@ -1455,23 +1455,23 @@ $(function() {
             }
           });
         });
-      
+
         // End of disabling Perpetrator Details Religion Others input box
-      
+
         // Start of disabling Perpetrator Details Is Perpetrator Minor?: input box
-      
+
         $(function() {
         $('#perp_d_if_yes_pls_ind').attr('readonly', 'readonly')
-      
+
         if($('#perp_d_is_pm_yes_radio').is(':checked')){
-      
+
           $('#perp_d_if_yes_pls_ind').removeAttr('readonly');
         }
-      
+
         $('.perp_d_is_perp_minor').on('change', function(){
-      
+
           if($('#perp_d_is_pm_yes_radio').is(':checked')){
-      
+
             $('#perp_d_if_yes_pls_ind').removeAttr('readonly');
           }
           else {
@@ -1479,24 +1479,24 @@ $(function() {
           }
         });
         });
-      
+
         // End of disabling Perpetrator Details Is Perpetrator Minor?: input box
-      
+
         // Start of disabling Perpetrator Details Relationship of guardian to Perpetrator: if others input box
-      
+
         $(function() {
           $('.garrelVicsur').attr('readonly', 'readonly')
-      
+
           if ($('#garrelvicsur option:selected').val() == 'Others') {
-      
+
             $('#garinputrelvicsur').removeAttr('readonly');
           }
-      
+
           $('#garrelvicsur').change(function(e) {
             var selected_type = $(this).val();
-      
+
             if (selected_type == 'Others') {
-      
+
               $('#garinputrelvicsur').removeAttr('readonly');
             }
             else if (selected_type) {
@@ -1504,11 +1504,11 @@ $(function() {
             }
           });
         });
-      
+
         // End of disabling Perpetrator Details Relationship of guardian to Perpetrator: if others input box
-      
+
       }
-      
+
 
     }
   });
@@ -1518,17 +1518,17 @@ $(function() {
 
     $(function() {
       $('.relVicsur').attr('readonly', 'readonly')
-  
+
       if (($('#relvicsur option:selected').val() == 'Other Relatives, Specify:') || ($('#relvicsur option:selected').val() == 'Immediate Family Members, Specify:') || ($('#relvicsur option:selected').val() == 'Stepfamily Members, Specify:')) {
-  
+
         $('#inputrelvicsur').removeAttr('readonly');
       }
-  
+
       $('#relvicsur').change(function(e) {
         var selected_type = $(this).val();
-  
+
         if ((selected_type == 'Other Relatives, Specify:') || (selected_type == 'Immediate Family Members, Specify:') || (selected_type == 'Stepfamily Members, Specify:')) {
-  
+
           $('#inputrelvicsur').removeAttr('readonly');
         }
         else if (selected_type) {
@@ -1536,24 +1536,24 @@ $(function() {
         }
       });
     });
-  
+
     // End of disabling Perpetrator Details Relationship to the Victim-Survivor: if others input box
-  
+
     // Start of disabling Perpetrator Details Nationality Others input box
-  
+
     $(function() {
       $('.narelVicsur').attr('readonly', 'readonly')
-  
+
       if ($('#narelvicsur option:selected').val() == 'Others') {
-  
+
         $('#nainputrelvicsur').removeAttr('readonly');
       }
-  
+
       $('#narelvicsur').change(function(e) {
         var selected_type = $(this).val();
-  
+
         if (selected_type == 'Others') {
-  
+
           $('#nainputrelvicsur').removeAttr('readonly');
         }
         else if (selected_type) {
@@ -1561,24 +1561,24 @@ $(function() {
         }
       });
     });
-  
+
     // End of disabling Perpetrator Details Nationality Others input box
-  
+
     // Start of disabling Perpetrator Details Religion Others input box
-  
+
     $(function() {
       $('.rerelVicsur').attr('readonly', 'readonly')
-  
+
       if ($('#rerelvicsur option:selected').val() == 'Others') {
-  
+
         $('#reinputrelvicsur').removeAttr('readonly');
       }
-  
+
       $('#rerelvicsur').change(function(e) {
         var selected_type = $(this).val();
-  
+
         if (selected_type == 'Others') {
-  
+
           $('#reinputrelvicsur').removeAttr('readonly');
         }
         else if (selected_type) {
@@ -1586,23 +1586,23 @@ $(function() {
         }
       });
     });
-  
+
     // End of disabling Perpetrator Details Religion Others input box
-  
+
     // Start of disabling Perpetrator Details Is Perpetrator Minor?: input box
-  
+
     $(function() {
     $('#perp_d_if_yes_pls_ind').attr('readonly', 'readonly')
-  
+
     if($('#perp_d_is_pm_yes_radio').is(':checked')){
-  
+
       $('#perp_d_if_yes_pls_ind').removeAttr('readonly');
     }
-  
+
     $('.perp_d_is_perp_minor').on('change', function(){
-  
+
       if($('#perp_d_is_pm_yes_radio').is(':checked')){
-  
+
         $('#perp_d_if_yes_pls_ind').removeAttr('readonly');
       }
       else {
@@ -1610,24 +1610,24 @@ $(function() {
       }
     });
     });
-  
+
     // End of disabling Perpetrator Details Is Perpetrator Minor?: input box
-  
+
     // Start of disabling Perpetrator Details Relationship of guardian to Perpetrator: if others input box
-  
+
     $(function() {
       $('.garrelVicsur').attr('readonly', 'readonly')
-  
+
       if ($('#garrelvicsur option:selected').val() == 'Others') {
-  
+
         $('#garinputrelvicsur').removeAttr('readonly');
       }
-  
+
       $('#garrelvicsur').change(function(e) {
         var selected_type = $(this).val();
-  
+
         if (selected_type == 'Others') {
-  
+
           $('#garinputrelvicsur').removeAttr('readonly');
         }
         else if (selected_type) {
@@ -1635,7 +1635,7 @@ $(function() {
         }
       });
     });
-  
+
     // End of disabling Perpetrator Details Relationship of guardian to Perpetrator: if others input box
 }
 
@@ -1729,7 +1729,7 @@ $(function() {
     }
 
     $('#serviceprovider').change(function(e) {
-      
+
       var selected_type = $(this).val();
 
       if (selected_type == 'Others') {
@@ -1873,7 +1873,7 @@ $(function(){
     }
 
     $('#sexHaModal').on("change", function(){
-        
+
         if ($('#sexHaModal').is(':checked')) {
             $('#inputSexHaModal').removeAttr('readonly');
         } else {
@@ -2197,12 +2197,12 @@ $(function() {
 // Start of Search Directories
 
 $('#serviceprovider').change(function(){
-    
+
     var service_provider = $('#serviceprovider option:selected').val();
 
     $.ajax({
         url: rootURL + 'api/v1/case/search-directory/'+ service_provider,
-        success: function (result) {    
+        success: function (result) {
 
             if(result == ''){
 
@@ -2265,16 +2265,16 @@ $('#serviceprovider').change(function(){
               $('#im_dasp_contact_no_3').val('');
 
               result.forEach(element => {
-  
+
                 $('#im_dsp_full_name').append(`<option value="`+ element['id'] +`">`+ element['dir_first_name'] +` `+ element['dir_last_name'] +`</option>`);
                 $('#im_dasp_full_name').append(`<option value="`+ element['id'] +`">`+ element['dir_first_name'] +` `+ element['dir_last_name'] +`</option>`);
-  
+
               });
 
               // Start of Search Directories Details
 
               $('#im_dsp_full_name').change(function(){
-                  
+
                 var service_provider_details = $('#im_dsp_full_name option:selected').val();
 
                 // Put Name Text value to im_dsp_full_name_id hidden input
@@ -2282,7 +2282,7 @@ $('#serviceprovider').change(function(){
 
                 $.ajax({
                     url: rootURL + 'api/v1/case/search-directory-details/'+ service_provider_details,
-                    success: function (result) {    
+                    success: function (result) {
 
                       $('#im_dsp_post_desi').val(result.dir_post_desi);
                       $('#im_dsp_email').val(result.dir_email);
@@ -2299,7 +2299,7 @@ $('#serviceprovider').change(function(){
               // Start of Search Directories Details
 
               $('#im_dasp_full_name').change(function(){
-    
+
                 var service_provider_details = $('#im_dasp_full_name option:selected').val();
 
                 // Put Name Text value to im_dasp_full_name_id hidden input
@@ -2307,7 +2307,7 @@ $('#serviceprovider').change(function(){
 
                 $.ajax({
                     url: rootURL + 'api/v1/case/search-directory-details/'+ service_provider_details,
-                    success: function (result) {    
+                    success: function (result) {
 
                       $('#im_dasp_post_desi').val(result.dir_post_desi);
                       $('#im_dasp_email').val(result.dir_email);
@@ -2322,7 +2322,7 @@ $('#serviceprovider').change(function(){
               // End of Search Directories Details
             }
 
-          
+
         }
     });
 
@@ -2333,12 +2333,12 @@ $('#serviceprovider').change(function(){
 // Start of Search Directories Modal
 
 $('#serviceproviderModal').change(function(){
-    
+
   var service_provider = $('#serviceproviderModal option:selected').val();
 
   $.ajax({
       url: rootURL + 'api/v1/case/search-directory/'+ service_provider,
-      success: function (result) {    
+      success: function (result) {
 
           if(result == ''){ // If no directories found
 
@@ -2410,7 +2410,7 @@ $('#serviceproviderModal').change(function(){
             // Start of Search Directories Modal Details
 
             $('#im_dsp_full_name_modal').change(function(){
-                
+
               var service_provider_details = $('#im_dsp_full_name_modal option:selected').val();
 
               // Put Name Text value to im_dsp_full_name_modal_id hidden input
@@ -2418,7 +2418,7 @@ $('#serviceproviderModal').change(function(){
 
               $.ajax({
                   url: rootURL + 'api/v1/case/search-directory-details/'+ service_provider_details,
-                  success: function (result) {    
+                  success: function (result) {
 
                     $('#im_dsp_post_desi_modal').val(result.dir_post_desi);
                     $('#im_dsp_email_modal').val(result.dir_email);
@@ -2435,7 +2435,7 @@ $('#serviceproviderModal').change(function(){
             // Start of Search Directories Modal Details
 
             $('#im_dasp_full_name_modal').change(function(){
-  
+
               var service_provider_details = $('#im_dasp_full_name_modal option:selected').val();
 
               // Put Name Text value to im_dasp_full_name_modal_id hidden input
@@ -2443,7 +2443,7 @@ $('#serviceproviderModal').change(function(){
 
               $.ajax({
                   url: rootURL + 'api/v1/case/search-directory-details/'+ service_provider_details,
-                  success: function (result) {    
+                  success: function (result) {
 
                     $('#im_dasp_post_desi_modal').val(result.dir_post_desi);
                     $('#im_dasp_email_modal').val(result.dir_email);
@@ -2458,7 +2458,7 @@ $('#serviceproviderModal').change(function(){
             // End of Search Directories Modal Details
           }
 
-        
+
       }
   });
 
@@ -2469,7 +2469,7 @@ $('#serviceproviderModal').change(function(){
 // Start of Edit Directories
 
 function changeDirectories(service_provider_id, service_provider_full_name_id, service_provider_position_id, service_provider_email_id, service_provider_1st_contact_id, service_provider_2nd_contact_id, service_provider_3rd_contact_id){
-  
+
   Swal.fire({
     title: 'Do you want to change the Service Provider details?',
     html: "<center>Existing Service Provider details will be reset!</center>",
@@ -2492,12 +2492,12 @@ function changeDirectories(service_provider_id, service_provider_full_name_id, s
 
     $.ajax({
       url: rootURL + 'api/v1/case/search-directory/'+ service_provider,
-      success: function (result) {    
-  
+      success: function (result) {
+
         if(result == ''){
-  
+
           // Set Details to empty if no directories
-  
+
           $('#'+ service_provider_full_name_id +'').parent().empty().html(`<span><p class="card-text">Full Name</p></span>
           <input id="`+ service_provider_full_name_id +`" name="`+ service_provider_full_name_id +`" class="w-100 form-control" placeholder="No Directories"/>`);
 
@@ -2506,11 +2506,11 @@ function changeDirectories(service_provider_id, service_provider_full_name_id, s
           $('#'+ service_provider_1st_contact_id +'').val('');
           $('#'+ service_provider_2nd_contact_id +'').val('');
           $('#'+ service_provider_3rd_contact_id +'').val('');
-  
+
         }else{
-  
+
           // Set Details to empty if with directories
-  
+
           $('#'+ service_provider_full_name_id +'').parent().html(`
             <span><p class="card-text">Full Name</p></span>
             <select id="`+ service_provider_full_name_id +`" aria-aria-controls='example' class="date-picker w-100 form-control">
@@ -2524,7 +2524,7 @@ function changeDirectories(service_provider_id, service_provider_full_name_id, s
           $('#'+ service_provider_1st_contact_id +'').val('');
           $('#'+ service_provider_2nd_contact_id +'').val('');
           $('#'+ service_provider_3rd_contact_id +'').val('');
-  
+
           result.forEach(element => {
 
             $('#'+ service_provider_full_name_id +'').append(`<option value="`+ element['id'] +`">`+ element['dir_first_name'] +` `+ element['dir_last_name'] +`</option>`);
@@ -2534,7 +2534,7 @@ function changeDirectories(service_provider_id, service_provider_full_name_id, s
           // Start of Search Directories Details
 
           $('#'+ service_provider_full_name_id +'').change(function(){
-  
+
             var service_provider_details = $('#'+ service_provider_full_name_id +' option:selected').val();
 
             // Put Name Text value to '+ service_provider_full_name_id +'_id hidden input
@@ -2542,7 +2542,7 @@ function changeDirectories(service_provider_id, service_provider_full_name_id, s
 
             $.ajax({
                 url: rootURL + 'api/v1/case/search-directory-details/'+ service_provider_details,
-                success: function (result) {    
+                success: function (result) {
 
                   $('#'+ service_provider_position_id +'').val(result.dir_post_desi);
                   $('#'+ service_provider_email_id +'').val(result.dir_email);
@@ -2555,11 +2555,11 @@ function changeDirectories(service_provider_id, service_provider_full_name_id, s
           });
 
           // End of Search Directories Details
-  
-        }  
+
+        }
       }
     });
-      
+
   }
   });
 
@@ -2590,7 +2590,7 @@ function searchUser(){
 // Search Directories
 
 function searchDirectories(){
-  
+
   location.assign(rootURL + 'admin/maintenance/directory/search/'+ $('#directory_last_name_search').val());
 
 }
@@ -2598,7 +2598,7 @@ function searchDirectories(){
 // Sort List of GBV Cases Per Month
 
 function sortListOfGBVCasesPerMonth(){
-  
+
   location.assign(rootURL + 'admin/report/sort-list-of-gbv-cases-per-month/'+ $('#date_from_sort_gbv_cases_per_month').val() +'/'+ $('#date_to_sort_gbv_cases_per_month').val());
 
 }

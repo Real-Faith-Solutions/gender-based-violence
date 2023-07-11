@@ -78,13 +78,13 @@
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col"><span><p class="card-text">Extension</p></span>
-                                            <input type="text" name="extension_name" placeholder="" class="w-100 form-control" />
+                                            <input type="text" name="extension_name" placeholder="" class="w-50 form-control" />
                                         </div>
                                         <div class="col"><span><p class="card-text">Nickname/Alias</p></span>
                                             <input type="text" name="alias_name" placeholder="" class="w-100 form-control" />
                                         </div>
                                         <div class="col"><span><p class="card-text">Sex<span class="asterisk">*</span></p></span>
-                                            <select name="sex" aria-aria-controls='example' class="date-picker w-100 form-control">
+                                            <select name="sex" aria-aria-controls='example' class="date-picker w-50 form-control">
                                                 <option value="">Please Select</option>
                                                 <option value="Male">Male</option>
                                                 <option value="Female">Female</option>
@@ -194,6 +194,8 @@
                                     </div>
 
                                     {{-- position streeet --}}
+
+
                                     <div class="row mb-3">
                                         <div class="col"><span><p class="card-text">Region</p></span>
                                             <select id="region" aria-aria-controls='example' class="date-picker w-100 form-control">
@@ -208,25 +210,24 @@
                                             </select>
                                             <input type="hidden" id="province_id" name="province"/>
                                         </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                         <div class="col"><span><p class="card-text">City/Municipality</p></span>
+                                        <div class="col"><span><p class="card-text">City/Municipality</p></span>
                                             <select id="city" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                                             </select>
                                             <input type="hidden" id="city_id" name="city"/>
                                         </div>
-
                                     </div>
+
                                     <div class="row mb-2">
                                         <div class="col"><span><p class="card-text">Barangay</p></span>
                                             <select id="barangay" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                                             </select>
                                             <input type="hidden" id="barangay_id" name="barangay"/>
-                                            <div class=""><span><p class="card-text">Street</p></span>
-                                                <input type="text" name="street" class="w-100 form-control" />
-                                            </div>
+                                        </div>
+
+                                        <div class="col"><span><p class="card-text">Street</p></span>
+                                            <input type="text" name="street" class="w-100 form-control" />
                                         </div>
                                     </div>
                                     <div class="row mb-3">
@@ -283,12 +284,12 @@
                                     </div>
                                     <div class="row my-3">
                                         <div class="col">
-                                            <span><p class="card-text">Occupation:<span class="asterisk">*</span></p></span>
+                                            <span><p class="card-text">Occupation:</p></span>
                                             <input type="text" class="w-100 form-control" name="job_vict_sur"/>
                                         </div>
                                         <div class="col">
-                                            <span><p class="card-text">Age:<span class="asterisk">*</span></p></span>
-                                            <input type="number" class="w-50 form-control" name="age_vict_sur"/>
+                                            <span><p class="card-text">Age:</span>
+                                            <input type="number" class=" form-control" style="width: 15%" name="age_vict_sur"/>
                                         </div>
                                     </div>
                                     <div class="row my-3">
@@ -309,10 +310,46 @@
                                     <div class="row mb-3">
                                         <div class="col-md-3"><span><p class="card-text">Address</p></span></div>
                                     </div>
-                                    <div class="row my-3">
+
+                                    <div class="row" style="">
                                         <div class="col">
-                                            <span><p class="card-text">Household No.</p></span>
-                                            <input type="text" name="fam_back_house_no" class="form-control" />
+                                            <span>
+                                                <p class="card-text">Region</p>
+                                            </span>
+                                            <select id="fam_back_region" aria-aria-controls='example' class="date-picker form-control" style="width: 90%">
+                                                <option value="">Please Select</option>
+                                                {{-- Drop-down list on this field is manipulated in "public/js/scripts.js" file --}}
+                                            </select>
+                                            <input type="hidden" id="fam_back_region_id" name="fam_back_region"/>
+                                        </div>
+                                        <div class="col">
+                                            <span>
+                                                <p class="card-text">Province</p>
+                                            </span>
+                                            <select id="fam_back_province" aria-aria-controls='example' class="date-picker form-control" style="width: 90%">
+                                                {{-- Drop-down list on this field is manipulated in "public/js/scripts.js" file --}}
+                                            </select>
+                                            <input type="hidden" id="fam_back_province_id" name="fam_back_province"/>
+                                        </div>
+                                        <div class="col">
+                                            <span>
+                                                <p class="card-text">City/Municipality</p>
+                                            </span>
+                                            <select id="fam_back_city" aria-aria-controls='example' class="date-picker form-control" style="width: 90%">
+                                                {{-- Drop-down list on this field is manipulated in "public/js/scripts.js" file --}}
+                                            </select>
+                                            <input type="hidden" id="fam_back_city_id" name="fam_back_city"/>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="row my-3">
+                                        <div class="col"><span><p class="card-text">Barangay</p></span>
+                                            <select id="fam_back_barangay" aria-aria-controls='example' class="date-picker w-100 form-control">
+                                                {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
+                                            </select>
+                                            <input type="hidden" id="fam_back_barangay_id" name="fam_back_barangay"/>
                                         </div>
                                         <div class="col">
                                             <span><p class="card-text">Street</p></span>
@@ -320,37 +357,8 @@
                                         </div>
                                     </div>
                                     <div class="row my-3">
-                                        <div class="col"><span><p class="card-text">Region<span class="asterisk">*</span></p></span>
-                                            <select id="fam_back_region" aria-aria-controls='example' class="date-picker w-100 form-control">
-                                                <option value="">Please Select</option>
-                                                {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
-                                            </select>
-                                            <input type="hidden" id="fam_back_region_id" name="fam_back_region"/>
-                                        </div>
-                                        <div class="col"><span><p class="card-text">Province<span class="asterisk">*</span></p></span>
-                                            <select id="fam_back_province" aria-aria-controls='example' class="date-picker w-100 form-control">
-                                                {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
-                                            </select>
-                                            <input type="hidden" id="fam_back_province_id" name="fam_back_province"/>
-                                        </div>
-                                    </div>
-                                    <div class="row my-3">
-                                        <div class="col"><span><p class="card-text">City/Municipality<span class="asterisk">*</span></p></span>
-                                            <select id="fam_back_city" aria-aria-controls='example' class="date-picker w-100 form-control">
-                                                {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
-                                            </select>
-                                            <input type="hidden" id="fam_back_city_id" name="fam_back_city"/>
-                                        </div>
-                                        <div class="col"><span><p class="card-text">Barangay<span class="asterisk">*</span></p></span>
-                                            <select id="fam_back_barangay" aria-aria-controls='example' class="date-picker w-100 form-control">
-                                                {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
-                                            </select>
-                                            <input type="hidden" id="fam_back_barangay_id" name="fam_back_barangay"/>
-                                        </div>
-                                    </div>
-                                    <div class="row my-3">
-                                        <div class="col-md-5"><p class="card-text">Contact Number:<span class="asterisk">*</span></p>
-                                            <input type="text" class="w-100 form-control" name="fam_back_cont_num" />
+                                        <div class="col-md-5"><p class="card-text">Contact Number:</p>
+                                            <input type="text" class="w-50 form-control" name="fam_back_cont_num" />
                                         </div>
                                     </div>
                                     <input type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#fam_back_modal" value="Add Multiple Record" />
@@ -393,6 +401,7 @@
                             <input type="button" name="previous" class="previous btn btn-secondary btn-md px-5 mx-1 float-end" value="Back" />
 
                         </fieldset>
+
                         <fieldset>
                             <div class="card border-light shadow-lg">
                                 <div class="p-3">Incidence Details</div>
@@ -415,22 +424,25 @@
                                         <div class="col-md-3"><span><p class="card-text">Nature of Incidence:<span class="asterisk">*</span></p></span></div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col"><input type="checkbox" name="id_int_part_vio" value="Intimate partner violence" />
+                                        <div class="col">
+                                            <input type="checkbox" name="id_int_part_vio" value="Intimate partner violence" onclick="toggleSubOptions(this)" />
                                             <span class="card-text">Intimate partner violence</span>
                                         </div>
                                     </div>
                                     <div class="row my-3">
                                         <div class="col"></div>
-                                        <div class="col-md-2"><p class="card-text">Sub Option:</p></div>
+                                        <div class="col-md-2">
+                                            <p class="card-text">Sub Option:</p>
+                                        </div>
                                         <div class="col-md-4">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_ipv_phys" value="Physical" id="flexCheckDefault" />
+                                                <input class="form-check-input" type="checkbox" name="id_ipv_phys" value="Physical" id="flexCheckDefault" disabled />
                                                 <label class="form-check-label" for="flexCheckDefault">
                                                     Physical
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_ipv_sexual" value="Sexual"  id="flexCheckChecked" />
+                                                <input class="form-check-input" type="checkbox" name="id_ipv_sexual" value="Sexual" id="flexCheckChecked" disabled />
                                                 <label class="form-check-label" for="flexCheckChecked">
                                                     Sexual
                                                 </label>
@@ -438,63 +450,26 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_ipv_psycho" value="Psychological" id="flexCheckDefault" />
+                                                <input class="form-check-input" type="checkbox" name="id_ipv_psycho" value="Psychological" id="flexCheckDefault" disabled />
                                                 <label class="form-check-label" for="flexCheckDefault">
                                                     Psychological
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_ipv_econo" value="Economic" id="flexCheckChecked" />
+                                                <input class="form-check-input" type="checkbox" name="id_ipv_econo" value="Economic" id="flexCheckChecked" disabled />
                                                 <label class="form-check-label" for="flexCheckChecked">
                                                     Economic
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
+
+
+
+
+
                                     <div class="row mb-3">
-                                        <div class="col"><input type="checkbox" name="id_rape" value="Rape" />
-                                            <span class="card-text">Rape</span></div>
-                                    </div>
-                                    <div class="row my-3">
-                                        <div class="col"></div>
-                                        <div class="col-md-2"><p class="card-text">Sub Option:</p></div>
-                                        <div class="col-md-4">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_rape_incest" value="Incest" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Incest
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_rape_sta_rape" value="Statutory Rape" id="flexCheckChecked" />
-                                                <label class="form-check-label" for="flexCheckChecked">
-                                                    Statutory Rape
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_rape_sex_int" value="Rape by Sexual Intercourse" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Rape by Sexual Intercourse
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_rape_sex_assa" value="Rape by Sexual Assault" id="flexCheckChecked" />
-                                                <label class="form-check-label" for="flexCheckChecked">
-                                                    Rape by Sexual Assault
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_rape_mar_rape" value="Marital Rape" id="flexCheckChecked" />
-                                                <label class="form-check-label" for="flexCheckChecked">
-                                                    Marital Rape
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col"><input type="checkbox" name="id_traf_per" value="Trafficking in Person" />
+                                        <div class="col"><input type="checkbox" name="id_traf_per" value="Trafficking in Person" onclick="toggleSubOptions_trafficking(this)"/>
                                             <span class="card-text">Trafficking in Person</span></div>
                                     </div>
                                     <div class="row my-3">
@@ -502,48 +477,50 @@
                                         <div class="col-md-2"><p class="card-text">Sub Option:</p></div>
                                         <div class="col-md-4">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_traf_per_sex_exp" value="Sexual Exploitation" id="flexCheckDefault" />
+                                                <input class="form-check-input" type="checkbox" name="id_traf_per_sex_exp" value="Sexual Exploitation" id="flexCheckDefault" disabled/>
                                                 <label class="form-check-label" for="flexCheckDefault">
                                                     Sexual Exploitation
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_traf_per_onl_exp" value="Online Exploitation"  id="flexCheckChecked" />
+                                                <input class="form-check-input" type="checkbox" name="id_traf_per_onl_exp" value="Online Exploitation"  id="flexCheckChecked" disabled/>
                                                 <label class="form-check-label" for="flexCheckChecked">
                                                     Online Exploitation
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_traf_per_others" value="Others" id="trafPer" onchange="trafPers()"/>
+                                                <input class="form-check-input" type="checkbox" name="id_traf_per_others" value="Others" id="trafPer" onchange="trafPers()" disabled    />
                                                 <label class="form-check-label" for="flexCheckChecked" >
                                                     Others
                                                 </label>
-                                                <span><input type="text" class="w-100 form-control" placeholder="Please specify" name="id_traf_per_others_spec" id="inputTrafper"/></span>
+                                                <span><input type="text" class="w-100 form-control" placeholder="Please specify" name="id_traf_per_others_spec" id="inputTrafper"/ ></span>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_traf_per_forc_lab" value="Forced Labor" id="flexCheckDefault" />
+                                                <input class="form-check-input" type="checkbox" name="id_traf_per_forc_lab" value="Forced Labor" id="flexCheckDefault" disabled/>
                                                 <label class="form-check-label" for="flexCheckDefault">
                                                     Forced Labor
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_traf_per_srem_org" value="Sale or Removal of Organs" id="flexCheckChecked" />
+                                                <input class="form-check-input" type="checkbox" name="id_traf_per_srem_org" value="Sale or Removal of Organs" id="flexCheckChecked" disabled/>
                                                 <label class="form-check-label" for="flexCheckChecked">
                                                     Sale or Removal of Organs
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_traf_per_prost" value="Prostitution" id="flexCheckDefault" />
+                                                <input class="form-check-input" type="checkbox" name="id_traf_per_prost" value="Prostitution" id="flexCheckDefault" disabled/>
                                                 <label class="form-check-label" for="flexCheckDefault">
                                                     Prostitution
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
+
+
                                     <div class="row mb-3">
-                                        <div class="col"><input type="checkbox" name="id_sex_hara" value="Sexual Harassment" />
+                                        <div class="col"><input type="checkbox" name="id_sex_hara" value="Sexual Harassment" onclick="toggleSubOptions_Sexual_Harassment(this)"/>
                                             <span class="card-text">Sexual Harassment</span>
                                         </div>
                                     </div>
@@ -552,13 +529,13 @@
                                         <div class="col-md-2"><p class="card-text">Sub Option:</p></div>
                                         <div class="col-md-4">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_sex_hara_ver" value="Verbal" id="flexCheckDefault" />
+                                                <input class="form-check-input" type="checkbox" name="id_sex_hara_ver" value="Verbal" id="flexCheckDefault" disabled/>
                                                 <label class="form-check-label" for="flexCheckDefault">
                                                     Verbal
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_sex_hara_others" value="Others" id="sexHa" onchange="sexHas()"/>
+                                                <input class="form-check-input" type="checkbox" name="id_sex_hara_others" value="Others" id="sexHa" onchange="sexHas()" disabled/>
                                                 <label class="form-check-label" for="flexCheckChecked">
                                                     Others
                                                 </label>
@@ -567,13 +544,13 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_sex_hara_phys" value="Physical" id="flexCheckChecked" />
+                                                <input class="form-check-input" type="checkbox" name="id_sex_hara_phys" value="Physical" id="flexCheckChecked" disabled/>
                                                 <label class="form-check-label" for="flexCheckChecked">
                                                     Physical
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_sex_hara_use_obj" value="Use of Object, Letters, or Notes with Sexual Undeskpinning" id="flexCheckDefault" />
+                                                <input class="form-check-input" type="checkbox" name="id_sex_hara_use_obj" value="Use of Object, Letters, or Notes with Sexual Undeskpinning" id="flexCheckDefault" disabled/>
                                                 <label class="form-check-label" for="flexCheckDefault">
                                                     Use of Object, Letters, or Notes with Sexual Undeskpinning
                                                 </label>
@@ -581,50 +558,62 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col"><input type="checkbox" name="id_chi_abu" value="Child Abuse, Exploitation and Discrimination" />
-                                            <span class="card-text">Child Abuse, Exploitation and Discrimination</span></div>
+                                        <div class="col"><input type="checkbox" name="id_chi_abu" value="Other form of Abuse and Discrimination" onclick="toggleSubOptions_Abuse_Discrimination(this)"/>
+                                            <span class="card-text">Other form of Abuse and Discrimination</span></div>
                                     </div>
                                     <div class="row my-3">
                                         <div class="col-md-2"></div>
                                         <div class="col-md-2"><p class="card-text">Sub Option:</p></div>
                                         <div class="col-md-4">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_chi_abu_efpaccp" value="Engage, Facilitate, Promote, or Attempt to Commit Child Prostitution" id="flexCheckDefault" />
+                                                <input class="form-check-input" type="checkbox" name="id_chi_abu_efpaccp" value="Engage, Facilitate, Promote, or Attempt to Commit Child Prostitution" id="flexCheckDefault" disabled/>
                                                 <label class="form-check-label" for="flexCheckDefault">
                                                     Engage, Facilitate, Promote, or Attempt to Commit Child Prostitution
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_chi_abu_lasc_cond" value="Lascivious Conduct" id="flexCheckChecked" />
+                                                <input class="form-check-input" type="checkbox" name="id_chi_abu_lasc_cond" value="Lascivious Conduct" id="flexCheckChecked" disabled/>
                                                 <label class="form-check-label" for="flexCheckChecked">
                                                     Lascivious Conduct
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_chi_abu_others" value="Others" id="chiAed" onchange="chiAeds()"/>
+                                                <input class="form-check-input" type="checkbox" name="id_chi_abu_others" value="Others" id="chiAed" onchange="chiAeds()" disabled/>
                                                 <label class="form-check-label" for="flexCheckChecked">
                                                     Others
                                                 </label>
-                                                <span><input type="text" class="w-100 form-control" placeholder="Please specify" name="id_chi_abu_others_spec" id="inputchiAed"/></span>
+                                                <span><input type="text" class="w-100 form-control" placeholder="Please specify" name="id_chi_abu_others_spec" id="inputchiAed" /></span>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_chi_abu_sex_int" value="Sexual Intercourse" id="flexCheckChecked" />
+                                                <input class="form-check-input" type="checkbox" name="id_chi_abu_sex_int" value="Sexual Intercourse" id="flexCheckChecked" disabled/>
                                                 <label class="form-check-label" for="flexCheckChecked">
                                                     Sexual Intercourse
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="id_chi_abu_phys_abu" value="Physical Abuse" id="flexCheckChecked" />
+                                                <input class="form-check-input" type="checkbox" name="id_chi_abu_phys_abu" value="Physical Abuse" id="flexCheckChecked" disabled/>
                                                 <label class="form-check-label" for="flexCheckChecked">
                                                     Physical Abuse
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="id_chi_abu_neglected" value="Sexual Intercourse" id="flexCheckChecked" disabled/>
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Neglected
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="id_chi_abu_abandoned" value="Physical Abuse" id="flexCheckChecked" disabled/>
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Abandoned
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col-md-3"><p class="card-text">Description of the Incident<span class="asterisk">*</span></p></div>
+                                        <div class="col-md-3"><p class="card-text">Description of the Incident</p></div>
                                         <div class="col-md-9 form-floating">
                                             <textarea class="form-control" placeholder="Leave a comment here" name="id_descr_inci" id="floatingTextarea2" rows="14"></textarea>
                                         </div>
@@ -640,41 +629,36 @@
                                     <div class="row mb-3">
                                         <div class="col-md-3"><span><p class="card-text">Location of Incidence:</p></span></div>
                                     </div>
-                                    <div class="row my-3">
-                                        <div class="col"><span><p class="card-text">Household No.</p></span>
-                                            <input type="text" name="inci_det_house_no" class="form-control" />
-                                        </div>
-                                        <div class="col"><span><p class="card-text">Street</p></span>
-                                            <input type="text" class="w-100 form-control" name="inci_det_street" />
-                                        </div>
-                                    </div>
                                     <div class="row mb-3">
-                                        <div class="col"><span><p class="card-text">Region<span class="asterisk">*</span></p></span>
-                                            <select id="inci_det_region" aria-aria-controls='example' class="date-picker w-100 form-control">
+                                        <div class="col"><span><p class="card-text">Region</p></span>
+                                            <select id="inci_det_region" aria-aria-controls='example' class="date-picker form-control" style="width: 90%"
                                                 <option value="">Please Select</option>
                                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                                             </select>
                                             <input type="hidden" id="inci_det_region_id" name="inci_det_region"/>
                                         </div>
-                                        <div class="col"><span><p class="card-text">Province<span class="asterisk">*</span></p></span>
-                                            <select id="inci_det_province" aria-aria-controls='example' class="date-picker w-100 form-control">
+                                        <div class="col"><span><p class="card-text">Province</p></span>
+                                            <select id="inci_det_province" aria-aria-controls='example' class="date-picker form-control" style="width: 90%">
                                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                                             </select>
                                             <input type="hidden" id="inci_det_province_id" name="inci_det_province"/>
                                         </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col"><span><p class="card-text">City/Municipality<span class="asterisk">*</span></p></span>
-                                            <select id="inci_det_city" aria-aria-controls='example' class="date-picker w-100 form-control">
+                                        <div class="col"><span><p class="card-text">City/Municipality</p></span>
+                                            <select id="inci_det_city" aria-aria-controls='example' class="date-picker form-control" style="width: 90%">
                                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                                             </select>
                                             <input type="hidden" id="inci_det_city_id" name="inci_det_city"/>
                                         </div>
-                                        <div class="col"><span><p class="card-text">Barangay<span class="asterisk">*</span></p></span>
+                                    </div>
+                                    <div class="row my-3">
+                                        <div class="col"><span><p class="card-text">Barangay</p></span>
                                             <select id="inci_det_barangay" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                                             </select>
                                             <input type="hidden" id="inci_det_barangay_id" name="inci_det_barangay"/>
+                                        </div>
+                                        <div class="col"><span><p class="card-text">Street</p></span>
+                                            <input type="text" class="w-100 form-control" name="inci_det_street" />
                                         </div>
                                     </div>
                                     <div class="row mb-3">
@@ -1797,13 +1781,13 @@
         <div class="modal-dialog modal-xl" style="width:100%;">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modal-title">Perpetrator Details</h5>
+                    <h5 class="modal-title" id="modal-title">Perpetrat Details</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="closeAdditionalPerpetratorDetailsForm()"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row mb-3">
                         <div class="col">
-                            <span><p class="card-text">Last Name<span class="asterisk">*</span></p></span>
+                            <span><p class="card-text">Last Name</p></span>
                             <input type="text" class="w-100 form-control" name="perp_d_last_name_modal" id="perp_d_last_name_modal" required/>
                             <input type="hidden" class="w-100 form-control" name="case_no_modal" id="perp_det_case_no_modal" />
                         </div>
@@ -1919,9 +1903,7 @@
                         <div class="col-md-3"><span><p class="card-text">Address</p></span></div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col"><span><p class="card-text">Household No.</p></span>
-                            <input type="text" name="perp_d_house_no_modal" id="perp_d_house_no_modal" class="form-control"/>
-                        </div>
+
                         <div class="col"><span><p class="card-text">Street</p></span>
                             <input type="text" name="perp_d_street_modal" id="perp_d_street_modal" class="w-100 form-control"/>
                         </div>

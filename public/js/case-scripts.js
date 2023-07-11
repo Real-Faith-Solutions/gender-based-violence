@@ -1,4 +1,4 @@
-// Start of submit form using Sweet Alert 
+// Start of submit form using Sweet Alert
 
 
 function submitCreateCaseForm($formStatus){
@@ -22,7 +22,7 @@ function submitCreateCaseForm($formStatus){
                     if (response === 'Case successfully created and submitted'){
                         Swal.fire({
                             icon: 'success',
-                            title: 'Saved!', 
+                            title: 'Saved!',
                             html: `<center>Case successfully created and submitted.</center>`
                         });
                         $('#error-form').empty();
@@ -31,20 +31,20 @@ function submitCreateCaseForm($formStatus){
                     else if (response === 'Case successfully saved as draft'){
                         Swal.fire({
                             icon: 'success',
-                            title: 'Saved!', 
+                            title: 'Saved!',
                             html: `<center>Case successfully saved as draft.</center>`
                         });
                         $('#error-form').empty();
-                        location.assign(rootURL + 'admin/case-folder/master-list');  
+                        location.assign(rootURL + 'admin/case-folder/master-list');
                     }
                     else if (response === `Sorry you don't have the rights to create case please contact the administrator`){
                         Swal.fire({
                             icon: 'error',
-                            title: 'Error!', 
+                            title: 'Error!',
                             html: `<center>Sorry you don't have the rights to create case please contact the administrator.</center>`
                         });
                         $('#error-form').empty();
-                        location.assign(rootURL + 'admin/case-folder/master-list');  
+                        location.assign(rootURL + 'admin/case-folder/master-list');
                     }
                     else{
 
@@ -69,7 +69,7 @@ function submitCreateCaseForm($formStatus){
 }
 
 
-// End of submit form using Sweet Alert 
+// End of submit form using Sweet Alert
 
 // Start of submit Edit case form using Sweet Alert
 
@@ -83,18 +83,18 @@ function submitEditCaseForm($formStatus, $case_no){
         denyButtonText: `Don't save`,
     }).then((result) => {
         if (result.isConfirmed) {
-            
+
             $("#form_status").val($formStatus);
             $.ajax({
                 type: "POST",
                 url: rootURL + 'admin/case-folder/update-created-case/' + $case_no,
                 data: $("#msform").serialize(),
                 success: function(response) {
-                    
+
                     if (response === 'Case successfully submitted'){
                         Swal.fire({
                             icon: 'success',
-                            title: 'Saved!', 
+                            title: 'Saved!',
                             html: `<center>Case successfully submitted.</center>`
                         });
                         $('#error-form').empty();
@@ -103,7 +103,7 @@ function submitEditCaseForm($formStatus, $case_no){
                     else if (response === 'Case successfully saved as draft'){
                         Swal.fire({
                             icon: 'success',
-                            title: 'Saved!', 
+                            title: 'Saved!',
                             html: `<center>Case successfully saved as draft.</center>`
                         });
                         $('#error-form').empty();
@@ -112,7 +112,7 @@ function submitEditCaseForm($formStatus, $case_no){
                     else if (response === 'Case already closed editing was disabled'){
                         Swal.fire({
                             icon: 'error',
-                            title: 'Error!', 
+                            title: 'Error!',
                             html: `<center>Case already closed editing was disabled.</center>`
                         });
                         $('#error-form').empty();
@@ -121,7 +121,7 @@ function submitEditCaseForm($formStatus, $case_no){
                     else if (response === `Sorry you don't have the rights to update this case please contact the administrator`){
                         Swal.fire({
                             icon: 'error',
-                            title: 'Error!', 
+                            title: 'Error!',
                             html: `<center>Sorry you don't have the rights to update this case please contact the administrator.</center>`
                         });
                         $('#error-form').empty();
@@ -153,7 +153,7 @@ function submitEditCaseForm($formStatus, $case_no){
 // End of submit Edit case form using Sweet Alert
 
 
-// Start of upload file form javascript script 
+// Start of upload file form javascript script
 
 if($('#upload_file_form').html()){
 
@@ -170,15 +170,15 @@ if($('#upload_file_form').html()){
         else{
             Swal.fire('Case No. must be filled');
         }
-        
+
     });
 
     fileInput.onchange = ({target}) =>{
-        
+
         let file = target.files[0];
         if(file){
             let fileName = file.name;
-            
+
             if(fileName.legth >=12){
                 let splitName = fileName.split('.');
                 fileName = splitName[0].substring(0, 12) + "... ." + splitName[1];
@@ -186,11 +186,11 @@ if($('#upload_file_form').html()){
             uploadFile(fileName);
         }
     }
-    
+
     function uploadFile(name){
 
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", rootURL + 'api/v1/case/upload/'+ $("#case_no").val()); 
+        xhr.open("POST", rootURL + 'api/v1/case/upload/'+ $("#case_no").val());
 
         // Start upload progress event listener
 
@@ -201,7 +201,7 @@ if($('#upload_file_form').html()){
             let fileSize;
             (fileTotal < 1024) ? fileSize = fileTotal + " KB" : fileSize = (loaded / (1024 * 1024)).toFixed(2) + " MB";
             let progressHTML = `<li class="row" style="background: #fceae8; margin-bottom: 10px; list-style: none; padding: 15px 20px; border-radius: 5px; display: flex; justify-content: space-between;">
-                                    <i class="fa fa-file-alt" style="font-size: 30px; color: #eb6c60;"></i>    
+                                    <i class="fa fa-file-alt" style="font-size: 30px; color: #eb6c60;"></i>
                                     <div class="content" style="width: 89%; margin-left: 15px;">
                                         <div class="details" style="display: flex; align-items: center; margin-bottom: 7px; justify-content: space-between;">
                                             <span class="name" style="font-size: 14px;">${name} - Uploading</span>
@@ -222,7 +222,7 @@ if($('#upload_file_form').html()){
 
                     let uploadedHTML = `<li class="row" style="background: #fceae8; margin-bottom: 10px; list-style: none; padding: 15px 20px; border-radius: 5px; display: flex; justify-content: space-between;">
                                             <div class="content" style="display: flex; align-items: center;">
-                                                <i class="fa fa-file-alt" style="font-size: 30px; color: #eb6c60;"></i> 
+                                                <i class="fa fa-file-alt" style="font-size: 30px; color: #eb6c60;"></i>
                                                 <div class="details" style="display: flex; margin-left: 15px; flex-direction: column;">
                                                     <span class="name" style="font-size: 14px;">${name} - Uploaded</span>
                                                     <span class="size" style="font-size: 11px; color: #404040;">${fileSize}</span>
@@ -243,7 +243,7 @@ if($('#upload_file_form').html()){
             if (xhr.readyState == XMLHttpRequest.DONE) {
 
                 // Check User Authorization
-                
+
                 if(xhr.responseText == `Sorry you don't have the rights to upload files, uploaded file was not saved please contact the administrator`){
 
                     let progressHTML = `<header style="color: #eb6c60; font-size: 17px; font-weight: 600; text-align: center;">Sorry you don't have the rights to upload files, uploaded file was not saved please contact the administrator</header>`;
@@ -255,7 +255,7 @@ if($('#upload_file_form').html()){
                     let progressHTML = `<header style="color: #eb6c60; font-size: 17px; font-weight: 600; text-align: center;">Case already closed, the uploaded file was not saved</header>`;
 
                     progressArea.innerHTML = progressHTML;
-                    
+
                 }
             }
         }
@@ -266,10 +266,10 @@ if($('#upload_file_form').html()){
 
 }
 
-// End of upload file form javascript script 
+// End of upload file form javascript script
 
 
-// Start of getting the case uploaded files link 
+// Start of getting the case uploaded files link
 
 function closeUploadFileModalForm(){
 
@@ -294,9 +294,9 @@ function closeUploadFileModalForm(){
 }
 
 
-// End of getting the case uploaded files link 
+// End of getting the case uploaded files link
 
-// Start of deleting case uploaded files Sweet Alert modal 
+// Start of deleting case uploaded files Sweet Alert modal
 
 
     function deleteCaseUploadedFilesModal($id, $case_no, $file){
@@ -321,7 +321,7 @@ function closeUploadFileModalForm(){
                         if (response === 'The file was successfully deleted'){
                             Swal.fire({
                                 icon: 'success',
-                                title: 'Deleted!', 
+                                title: 'Deleted!',
                                 html: `<center>The file was successfully deleted.</center>`
                             });
                             closeUploadFileModalForm();
@@ -329,7 +329,7 @@ function closeUploadFileModalForm(){
                         else if (response === `Sorry you don't have the rights to delete case record please contact the administrator`){
                             Swal.fire({
                                 icon: 'error',
-                                title: 'Error!', 
+                                title: 'Error!',
                                 html: `<center>Sorry you don't have the rights to delete case record please contact the administrator.</center>`
                             });
                             closeUploadFileModalForm();
@@ -337,7 +337,7 @@ function closeUploadFileModalForm(){
                         else if (response === 'Case already closed delete was disabled'){
                             Swal.fire({
                                 icon: 'error',
-                                title: 'Error!', 
+                                title: 'Error!',
                                 html: `<center>Case already closed delete was disabled.</center>`
                             });
                             closeUploadFileModalForm();
@@ -355,9 +355,9 @@ function closeUploadFileModalForm(){
     }
 
 
-// End of deleting case uploaded files Sweet Alert modal 
+// End of deleting case uploaded files Sweet Alert modal
 
-// Start of submit additional Family Background info form using Sweet Alert 
+// Start of submit additional Family Background info form using Sweet Alert
 
 
 function submitAdditionalFamilyBackgroundForm(){
@@ -380,7 +380,7 @@ function submitAdditionalFamilyBackgroundForm(){
                     if (response === `Creating Family Background Info Success`){
                         Swal.fire({
                             icon: 'success',
-                            title: 'Saved!', 
+                            title: 'Saved!',
                             html: `<center>Creating Family Background Info Success.</center>`
                         });
                         closeAdditionalFamilyBackgroundForm();
@@ -391,7 +391,7 @@ function submitAdditionalFamilyBackgroundForm(){
                     else if (response === `Sorry you don't have the rights to add record please contact the administrator`){
                         Swal.fire({
                             icon: 'error',
-                            title: 'Error!', 
+                            title: 'Error!',
                             html: `<center>Sorry you don't have the rights to add record please contact the administrator.</center>`
                         });
                         closeAdditionalFamilyBackgroundForm();
@@ -402,7 +402,7 @@ function submitAdditionalFamilyBackgroundForm(){
                     else if (response === `Case already closed add record was disabled`){
                         Swal.fire({
                             icon: 'error',
-                            title: 'Error!', 
+                            title: 'Error!',
                             html: `<center>Case already closed add record was disabled.</center>`
                         });
                         closeAdditionalFamilyBackgroundForm();
@@ -432,10 +432,10 @@ function submitAdditionalFamilyBackgroundForm(){
 
 }
 
-// End of submit additional Family Background info form using Sweet Alert 
+// End of submit additional Family Background info form using Sweet Alert
 
 
-// Start of getting the additional Family Background info 
+// Start of getting the additional Family Background info
 
 function closeAdditionalFamilyBackgroundForm(){
 
@@ -448,7 +448,7 @@ function closeAdditionalFamilyBackgroundForm(){
 
             result.dataFam.forEach(element => {
                 $('#fam_back_table_tbody').append('<tr>'+
-                '<td>'+ 
+                '<td>'+
                     ((result.master_list_rights_revise == true) ? '<a href="javascript:void(0)" class="text-orange-icon" data-bs-toggle="modal" data-bs-target="#fam_back_modal" onclick="getSpecificAdditionalFamilyBackgroundForm('+ element['id'] +', `Edit`)"><i class="fa fa-edit"></i></a>' : '') +
                     '<a href="javascript:void(0)" class="text-orange-icon" data-bs-toggle="modal" data-bs-target="#fam_back_modal" onclick="getSpecificAdditionalFamilyBackgroundForm('+ element['id'] +', `View`)"><i class="fa fa-eye"></i></a>'+
                     ((result.master_list_rights_delete == true) ? '<a href="javascript:void(0)" class="text-orange-icon" onclick="deleteSpecificAdditionalFamilyBackgroundModal('+ element['id'] +')"><i class="fa fa-trash"></i></a>' : '') +
@@ -460,7 +460,7 @@ function closeAdditionalFamilyBackgroundForm(){
                 '<td>'+ ((element['fam_back_house_no_modal'] == null) ? '' : element['fam_back_house_no_modal']) + ' ' + ((element['fam_back_street_modal'] == null) ? '' : element['fam_back_street_modal']) + ' ' + ((element['fam_back_barangay_modal'] == null) ? '' : element['fam_back_barangay_modal']) + ' ' + ((element['fam_back_city_modal'] == null) ? '' : element['fam_back_city_modal']) + '</td>'+
                 '<td>'+ ((element['fam_back_cont_num_modal'] == null) ? '-' : element['fam_back_cont_num_modal']) +'</td>'+
                 '</tr>');
-            });      
+            });
         }
     });
 
@@ -486,7 +486,7 @@ function closeAdditionalFamilyBackgroundForm(){
     // Unhide Save Button
     $('#fam_back_modal_save').removeAttr('hidden');
 
-    // Removed disabled and readonly in input, and select option 
+    // Removed disabled and readonly in input, and select option
     $('#fam_back_infos * input').removeAttr('readonly');
     $('#fam_back_infos * select').removeAttr('disabled');
 
@@ -516,9 +516,9 @@ function closeAdditionalFamilyBackgroundForm(){
 }
 
 
-// End of getting the additional Family Background info 
+// End of getting the additional Family Background info
 
-// Start of editing the additional Family Background specific info 
+// Start of editing the additional Family Background specific info
 
 
 function getSpecificAdditionalFamilyBackgroundForm(id, option){
@@ -546,7 +546,7 @@ function getSpecificAdditionalFamilyBackgroundForm(id, option){
 
         // Set Modal form tag onsubmit attribute to update function
         $('#fam_back_infos').attr('onsubmit','updateAdditionalFamilyBackgroundForm('+ id +')');
-        
+
         // Set Relationship to the Victim-Survivor: onclick attribute to changeRelationshipToTheVictimSurvivor() function
         $('#rel_vict_sur_modal').attr('onclick','changeRelationshipToTheVictimSurvivor("rel_vict_sur_modal")');
 
@@ -599,13 +599,13 @@ function getSpecificAdditionalFamilyBackgroundForm(id, option){
             }
 
         }
-    });   
+    });
 }
 
 
-// End of editing the additional Family Background specific info 
+// End of editing the additional Family Background specific info
 
-// Start of update additional Family Background info form using Sweet Alert 
+// Start of update additional Family Background info form using Sweet Alert
 
 
 function updateAdditionalFamilyBackgroundForm(id){
@@ -628,8 +628,8 @@ function updateAdditionalFamilyBackgroundForm(id){
                     if (response === 'Updating Family Background Info Success'){
                         Swal.fire({
                             icon: 'success',
-                            title: 'Saved!', 
-                            html: `<center>Updating Family Background Info Success.</center>`  
+                            title: 'Saved!',
+                            html: `<center>Updating Family Background Info Success.</center>`
                         });
                         closeAdditionalFamilyBackgroundForm();
                         $('#fam_back_modal').modal('toggle');
@@ -639,8 +639,8 @@ function updateAdditionalFamilyBackgroundForm(id){
                     else if (response === 'Case already closed editing was disabled'){
                         Swal.fire({
                             icon: 'error',
-                            title: 'Error!', 
-                            html: `<center>Case already closed editing was disabled.</center>`  
+                            title: 'Error!',
+                            html: `<center>Case already closed editing was disabled.</center>`
                         });
                         closeAdditionalFamilyBackgroundForm();
                         $('#fam_back_modal').modal('toggle');
@@ -650,8 +650,8 @@ function updateAdditionalFamilyBackgroundForm(id){
                     else if (response === `Sorry you don't have the rights to update this case please contact the administrator`){
                         Swal.fire({
                             icon: 'error',
-                            title: 'Error!', 
-                            html: `<center>Sorry you don't have the rights to update this case please contact the administrator.</center>`  
+                            title: 'Error!',
+                            html: `<center>Sorry you don't have the rights to update this case please contact the administrator.</center>`
                         });
                         closeAdditionalFamilyBackgroundForm();
                         $('#fam_back_modal').modal('toggle');
@@ -681,10 +681,10 @@ function updateAdditionalFamilyBackgroundForm(id){
 }
 
 
-// End of update additional Family Background info form using Sweet Alert 
+// End of update additional Family Background info form using Sweet Alert
 
-// Start of deleting additional Family Background info Sweet Alert modal 
- 
+// Start of deleting additional Family Background info Sweet Alert modal
+
 
     function deleteSpecificAdditionalFamilyBackgroundModal(id){
         Swal.fire({
@@ -708,7 +708,7 @@ function updateAdditionalFamilyBackgroundForm(id){
                         if (response === 'The Family Background Info was successfully deleted'){
                             Swal.fire({
                                 icon: 'success',
-                                title: 'Deleted!', 
+                                title: 'Deleted!',
                                 html: `<center>The Family Background Info was successfully deleted.</center>`,
                             });
                             closeAdditionalFamilyBackgroundForm();
@@ -716,7 +716,7 @@ function updateAdditionalFamilyBackgroundForm(id){
                         else if (response === `Sorry you don't have the rights to delete case record please contact the administrator`){
                             Swal.fire({
                                 icon: 'error',
-                                title: 'Error!', 
+                                title: 'Error!',
                                 html: `<center>Sorry you don't have the rights to delete case record please contact the administrator.</center>`,
                             });
                             closeAdditionalFamilyBackgroundForm();
@@ -724,7 +724,7 @@ function updateAdditionalFamilyBackgroundForm(id){
                         else if (response === 'Case already closed delete was disabled'){
                             Swal.fire({
                                 icon: 'error',
-                                title: 'Error!', 
+                                title: 'Error!',
                                 html: `<center>Case already closed delete was disabled.</center>`,
                             });
                             closeAdditionalFamilyBackgroundForm();
@@ -742,9 +742,9 @@ function updateAdditionalFamilyBackgroundForm(id){
     }
 
 
-// End of deleting additional Family Background info Sweet Alert modal 
+// End of deleting additional Family Background info Sweet Alert modal
 
-// Start of submit additional Incidence Details info form using Sweet Alert 
+// Start of submit additional Incidence Details info form using Sweet Alert
 
 
 function submitAdditionalIncidenceDetailsForm(){
@@ -767,7 +767,7 @@ function submitAdditionalIncidenceDetailsForm(){
                     if (response === `Creating Incidence Details Info Success`){
                         Swal.fire({
                             icon: 'success',
-                            title: 'Saved!', 
+                            title: 'Saved!',
                             html: `<center>Creating Incidence Details Info Success.</center>`
                         });
                         closeAdditionalIncidenceDetailsForm();
@@ -778,7 +778,7 @@ function submitAdditionalIncidenceDetailsForm(){
                     else if (response === `Sorry you don't have the rights to add record please contact the administrator`){
                         Swal.fire({
                             icon: 'error',
-                            title: 'Error!', 
+                            title: 'Error!',
                             html: `<center>Sorry you don't have the rights to add record please contact the administrator.</center>`
                         });
                         closeAdditionalIncidenceDetailsForm();
@@ -789,7 +789,7 @@ function submitAdditionalIncidenceDetailsForm(){
                     else if (response === `Case already closed add record was disabled`){
                         Swal.fire({
                             icon: 'error',
-                            title: 'Error!', 
+                            title: 'Error!',
                             html: `<center>Case already closed add record was disabled.</center>`
                         });
                         closeAdditionalIncidenceDetailsForm();
@@ -820,9 +820,9 @@ function submitAdditionalIncidenceDetailsForm(){
 }
 
 
-// End of submit additional Incidence Details info form using Sweet Alert 
+// End of submit additional Incidence Details info form using Sweet Alert
 
-// Start of getting the additional Incidence Details info 
+// Start of getting the additional Incidence Details info
 
 
 function closeAdditionalIncidenceDetailsForm(){
@@ -833,7 +833,7 @@ function closeAdditionalIncidenceDetailsForm(){
 
             // Empty Additional Incidence Details Table
             $("#inci_det_table_tbody").empty();
-            
+
             result.dataInci.forEach(element => {
                 $('#inci_det_table_tbody').append('<tr>'+
                 '<td>'+
@@ -872,7 +872,7 @@ function closeAdditionalIncidenceDetailsForm(){
     // Unhide Save Button
     $('#inci_det_modal_save').removeAttr('hidden');
 
-    // Removed disabled and readonly in input, checkbox button, textarea and select option 
+    // Removed disabled and readonly in input, checkbox button, textarea and select option
     $('#addIncidenceDetailInfos * input').removeAttr('readonly');
     $('#addIncidenceDetailInfos * select').removeAttr('disabled');
     $('#addIncidenceDetailInfos * [type="checkbox"]').removeAttr('disabled');
@@ -906,9 +906,9 @@ function closeAdditionalIncidenceDetailsForm(){
 }
 
 
-// End of getting the additional Incidence Details info 
+// End of getting the additional Incidence Details info
 
-// Start of editing the additional Incidence Details specific info 
+// Start of editing the additional Incidence Details specific info
 
 
 function getSpecificAdditionalIncidenceDetailsForm(id, option){
@@ -925,13 +925,13 @@ function getSpecificAdditionalIncidenceDetailsForm(id, option){
 
         // Hide Save Button
         $('#inci_det_modal_save').attr('hidden','hidden');
-    
+
         // Set input, checkbox button, textarea and select option to disabled and readonly
         $('#addIncidenceDetailInfos * input').attr('readonly','readonly');
         $('#addIncidenceDetailInfos * select').attr('disabled','disabled');
         $('#addIncidenceDetailInfos * [type="checkbox"]').attr('disabled','disabled');
         $('#addIncidenceDetailInfos * textarea').attr('readonly','readonly');
-    
+
     }
 
     else if(option == 'Edit'){
@@ -947,7 +947,7 @@ function getSpecificAdditionalIncidenceDetailsForm(id, option){
         $('#inci_det_province_modal').empty().attr('onclick', 'changeAddress("inci_det_region_modal", "inci_det_province_modal", "inci_det_city_modal", "inci_det_barangay_modal")');
         $('#inci_det_city_modal').empty().attr('onclick', 'changeAddress("inci_det_region_modal", "inci_det_province_modal", "inci_det_city_modal", "inci_det_barangay_modal")');
         $('#inci_det_barangay_modal').empty().attr('onclick', 'changeAddress("inci_det_region_modal", "inci_det_province_modal", "inci_det_city_modal", "inci_det_barangay_modal")');
-    
+
     }
 
     $.ajax({
@@ -1091,13 +1091,13 @@ function getSpecificAdditionalIncidenceDetailsForm(id, option){
                 }else{
                     $('#inputTrafperModal').attr('readonly','readonly');
                 }
-                
+
                 if(result.id_sex_hara_others_modal != null){
                     $('#inputSexHaModal').removeAttr('readonly');
                 }else{
                     $('#inputSexHaModal').attr('readonly','readonly');
                 }
-                
+
                 if(result.id_chi_abu_others_modal != null){
                     $('#inputchiAedModal').removeAttr('readonly');
                 }else{
@@ -1113,13 +1113,13 @@ function getSpecificAdditionalIncidenceDetailsForm(id, option){
             }
 
         }
-    });   
+    });
 }
 
 
-// End of editing the additional Incidence Details specific info 
+// End of editing the additional Incidence Details specific info
 
-// Start of update additional Incidence Details info form using Sweet Alert 
+// Start of update additional Incidence Details info form using Sweet Alert
 
 
 function updateAdditionalIncidenceDetailsForm(id){
@@ -1142,7 +1142,7 @@ function updateAdditionalIncidenceDetailsForm(id){
                     if (response === 'Updating Incidence Details Info Success'){
                         Swal.fire({
                             icon:'success',
-                            title: 'Saved!', 
+                            title: 'Saved!',
                             html: `<center>Updating Incidence Details Info Success.</center>`
                         });
                         closeAdditionalIncidenceDetailsForm();
@@ -1153,7 +1153,7 @@ function updateAdditionalIncidenceDetailsForm(id){
                     else if (response === 'Case already closed editing was disabled'){
                         Swal.fire({
                             icon:'error',
-                            title: 'Error!', 
+                            title: 'Error!',
                             html: `<center>Case already closed editing was disabled.</center>`
                         });
                         closeAdditionalIncidenceDetailsForm();
@@ -1164,7 +1164,7 @@ function updateAdditionalIncidenceDetailsForm(id){
                     else if (response === `Sorry you don't have the rights to update this case please contact the administrator`){
                         Swal.fire({
                             icon:'error',
-                            title: 'Error!', 
+                            title: 'Error!',
                             html: `<center>Sorry you don't have the rights to update this case please contact the administrator.</center>`
                         });
                         closeAdditionalIncidenceDetailsForm();
@@ -1195,10 +1195,10 @@ function updateAdditionalIncidenceDetailsForm(id){
 }
 
 
-// End of update additional Incidence Details info form using Sweet Alert 
+// End of update additional Incidence Details info form using Sweet Alert
 
-// Start of deleting additional Incidence Details info Sweet Alert modal 
- 
+// Start of deleting additional Incidence Details info Sweet Alert modal
+
 
     function deleteSpecificAdditionalIncidenceDetailsModal(id){
         Swal.fire({
@@ -1222,7 +1222,7 @@ function updateAdditionalIncidenceDetailsForm(id){
                         if (response === 'The Incidence Details Info was successfully deleted'){
                             Swal.fire({
                                 icon: 'success',
-                                title: 'Deleted!', 
+                                title: 'Deleted!',
                                 html: '<center>The Incidence Details Info was successfully deleted.</center>'
                             });
                             closeAdditionalIncidenceDetailsForm();
@@ -1230,7 +1230,7 @@ function updateAdditionalIncidenceDetailsForm(id){
                         else if (response === `Sorry you don't have the rights to delete case record please contact the administrator`){
                             Swal.fire({
                                 icon: 'error',
-                                title: 'Error!', 
+                                title: 'Error!',
                                 html: `<center>Sorry you don't have the rights to delete case record please contact the administrator.</center>`
                             });
                             closeAdditionalIncidenceDetailsForm();
@@ -1238,7 +1238,7 @@ function updateAdditionalIncidenceDetailsForm(id){
                         else if (response === 'Case already closed delete was disabled'){
                             Swal.fire({
                                 icon: 'error',
-                                title: 'Error!', 
+                                title: 'Error!',
                                 html: `<center>Case already closed delete was disabled.</center>`
                             });
                             closeAdditionalIncidenceDetailsForm();
@@ -1256,9 +1256,9 @@ function updateAdditionalIncidenceDetailsForm(id){
     }
 
 
-// End of deleting additional Incidence Details info Sweet Alert modal 
+// End of deleting additional Incidence Details info Sweet Alert modal
 
-// Start of submit additional Perpetrator Details info form using Sweet Alert 
+// Start of submit additional Perpetrator Details info form using Sweet Alert
 
 
 function submitAdditionalPerpetratorDetailsForm(){
@@ -1281,8 +1281,8 @@ function submitAdditionalPerpetratorDetailsForm(){
                     if (response === `Creating Perpetrator Details Info Success`){
                         Swal.fire({
                             icon: 'success',
-                            title: 'Saved!', 
-                            html: `<center>Creating Perpetrator Details Info Success.</center>` 
+                            title: 'Saved!',
+                            html: `<center>Creating Perpetrator Details Info Success.</center>`
                         });
                         closeAdditionalPerpetratorDetailsForm();
                         $('#modalPerpetratorDetailInfos').modal('toggle');
@@ -1292,8 +1292,8 @@ function submitAdditionalPerpetratorDetailsForm(){
                     else if (response === `Sorry you don't have the rights to add record please contact the administrator`){
                         Swal.fire({
                             icon: 'error',
-                            title: 'Error!', 
-                            html: `<center>Sorry you don't have the rights to add record please contact the administrator.</center>` 
+                            title: 'Error!',
+                            html: `<center>Sorry you don't have the rights to add record please contact the administrator.</center>`
                         });
                         closeAdditionalPerpetratorDetailsForm();
                         $('#modalPerpetratorDetailInfos').modal('toggle');
@@ -1303,8 +1303,8 @@ function submitAdditionalPerpetratorDetailsForm(){
                     else if (response === `Case already closed add record was disabled`){
                         Swal.fire({
                             icon: 'error',
-                            title: 'Error!', 
-                            html: `<center>Case already closed add record was disabled.</center>` 
+                            title: 'Error!',
+                            html: `<center>Case already closed add record was disabled.</center>`
                         });
                         closeAdditionalPerpetratorDetailsForm();
                         $('#modalPerpetratorDetailInfos').modal('toggle');
@@ -1334,9 +1334,9 @@ function submitAdditionalPerpetratorDetailsForm(){
 }
 
 
-// End of submit additional Perpetrator Details info form using Sweet Alert 
+// End of submit additional Perpetrator Details info form using Sweet Alert
 
-// Start of getting the additional Perpetrator Details info 
+// Start of getting the additional Perpetrator Details info
 
 
 function closeAdditionalPerpetratorDetailsForm(){
@@ -1367,7 +1367,7 @@ function closeAdditionalPerpetratorDetailsForm(){
     // Unhide Save Button
     $('#perp_det_modal_save').removeAttr('hidden');
 
-    // Removed disabled and readonly in input, radio button, and select option 
+    // Removed disabled and readonly in input, radio button, and select option
     $('#addPerpetratorDetailInfos * input').removeAttr('readonly');
     $('#addPerpetratorDetailInfos * select').removeAttr('disabled');
     $('#addPerpetratorDetailInfos * [type="radio"]').removeAttr('disabled');
@@ -1397,7 +1397,7 @@ function closeAdditionalPerpetratorDetailsForm(){
 
             $('#relvicsurModal').append('<option value="Other Relatives, Specify:">Other Relatives, Specify:</option>');
         }
-    }); 
+    });
 
      // Reset Religion list
 
@@ -1448,9 +1448,9 @@ function closeAdditionalPerpetratorDetailsForm(){
 }
 
 
-// End of getting the additional Perpetrator Details info 
+// End of getting the additional Perpetrator Details info
 
-// Start of editing the additional Perpetrator Details specific info 
+// Start of editing the additional Perpetrator Details specific info
 
 
 function getSpecificAdditionalPerpetratorDetailsForm(id, option){
@@ -1494,7 +1494,7 @@ function getSpecificAdditionalPerpetratorDetailsForm(id, option){
     //     $('#perp_d_province_modal').empty().attr('onclick', 'changeAddress("perp_d_region_modal", "perp_d_province_modal", "perp_d_city_modal", "perp_d_barangay_modal")');
     //     $('#perp_d_city_modal').empty().attr('onclick', 'changeAddress("perp_d_region_modal", "perp_d_province_modal", "perp_d_city_modal", "perp_d_barangay_modal")');
     //     $('#perp_d_barangay_modal').empty().attr('onclick', 'changeAddress("perp_d_region_modal", "perp_d_province_modal", "perp_d_city_modal", "perp_d_barangay_modal")');
-    
+
     // }
 
     $.ajax({
@@ -1615,17 +1615,17 @@ function getSpecificAdditionalPerpetratorDetailsForm(id, option){
             //     }else{
             //         $('#garinputrelvicsurModal').attr('readonly','readonly');
             //     }
-        
+
             // }
 
         }
-    });   
+    });
 }
 
 
-// End of editing the additional Perpetrator Details specific info 
+// End of editing the additional Perpetrator Details specific info
 
-// Start of update additional Perpetrator Details info form using Sweet Alert 
+// Start of update additional Perpetrator Details info form using Sweet Alert
 
 
 function updateAdditionalPerpetratorDetailsForm(id){
@@ -1648,7 +1648,7 @@ function updateAdditionalPerpetratorDetailsForm(id){
                     if (response === 'Updating Perpetrator Details Info Success'){
                         Swal.fire({
                             icon: 'success',
-                            title: 'Saved!', 
+                            title: 'Saved!',
                             html: `<center>Updating Perpetrator Details Info Success.</center>`
                         });
                         closeAdditionalPerpetratorDetailsForm();
@@ -1659,7 +1659,7 @@ function updateAdditionalPerpetratorDetailsForm(id){
                     else if (response === 'Case already closed editing was disabled'){
                         Swal.fire({
                             icon: 'error',
-                            title: 'Error!', 
+                            title: 'Error!',
                             html: `<center>Case already closed editing was disabled.</center>`
                         });
                         closeAdditionalPerpetratorDetailsForm();
@@ -1670,7 +1670,7 @@ function updateAdditionalPerpetratorDetailsForm(id){
                     else if (response === `Sorry you don't have the rights to update this case please contact the administrator`){
                         Swal.fire({
                             icon: 'error',
-                            title: 'Error!', 
+                            title: 'Error!',
                             html: `<center>Sorry you don't have the rights to update this case please contact the administrator.</center>`
                         });
                         closeAdditionalPerpetratorDetailsForm();
@@ -1701,10 +1701,10 @@ function updateAdditionalPerpetratorDetailsForm(id){
 }
 
 
-// End of update additional Perpetrator Details info form using Sweet Alert 
+// End of update additional Perpetrator Details info form using Sweet Alert
 
-// Start of deleting additional Perpetrator Details info Sweet Alert modal 
- 
+// Start of deleting additional Perpetrator Details info Sweet Alert modal
+
 
     function deleteSpecificAdditionalPerpetratorDetailsModal(id){
         Swal.fire({
@@ -1728,7 +1728,7 @@ function updateAdditionalPerpetratorDetailsForm(id){
                         if (response === 'The Perpetrator Details Info was successfully deleted'){
                             Swal.fire({
                                 icon: 'success',
-                                title: 'Deleted!', 
+                                title: 'Deleted!',
                                 html: `<center>The Perpetrator Details Info was successfully deleted.</center>`
                             });
                             closeAdditionalPerpetratorDetailsForm();
@@ -1736,7 +1736,7 @@ function updateAdditionalPerpetratorDetailsForm(id){
                         else if (response === `Sorry you don't have the rights to delete case record please contact the administrator`){
                             Swal.fire({
                                 icon: 'error',
-                                title: 'Error!', 
+                                title: 'Error!',
                                 html: `<center>Sorry you don't have the rights to delete case record please contact the administrator.</center>`
                             });
                             closeAdditionalPerpetratorDetailsForm();
@@ -1744,7 +1744,7 @@ function updateAdditionalPerpetratorDetailsForm(id){
                         else if (response === 'Case already closed delete was disabled'){
                             Swal.fire({
                                 icon: 'error',
-                                title: 'Error!', 
+                                title: 'Error!',
                                 html: `<center>Case already closed delete was disabled.</center>`
                             });
                             closeAdditionalPerpetratorDetailsForm();
@@ -1762,9 +1762,9 @@ function updateAdditionalPerpetratorDetailsForm(id){
     }
 
 
-// End of deleting additional Perpetrator Details info Sweet Alert modal 
+// End of deleting additional Perpetrator Details info Sweet Alert modal
 
-// Start of change additional Perpetrator Details info Relationship to the Victim-Survivor confirmation using Sweet Alert 
+// Start of change additional Perpetrator Details info Relationship to the Victim-Survivor confirmation using Sweet Alert
 
 
 function changePerpetratorDetailsRelationshipToTheVictimSurvivor(){
@@ -1797,15 +1797,15 @@ function changePerpetratorDetailsRelationshipToTheVictimSurvivor(){
 
                     $('#relvicsurModal').append('<option value="Other Relatives, Specify:">Other Relatives, Specify:</option>');
                 }
-            }); 
+            });
         }
     });
 }
 
 
-// End of change additional Perpetrator Details info Relationship to the Victim-Survivor confirmation using Sweet Alert 
+// End of change additional Perpetrator Details info Relationship to the Victim-Survivor confirmation using Sweet Alert
 
-// Start of submit additional Intervention Module info form using Sweet Alert 
+// Start of submit additional Intervention Module info form using Sweet Alert
 
 
 function submitAdditionalInterventionModuleForm(){
@@ -1828,7 +1828,7 @@ function submitAdditionalInterventionModuleForm(){
                     if (response === `Creating Intervention Module Info Success`){
                         Swal.fire({
                             icon: 'success',
-                            title: 'Saved!', 
+                            title: 'Saved!',
                             html: `<center>Creating Intervention Module Info Success.</center>`
                         });
                         closeAdditionalInterventionModuleForm();
@@ -1839,7 +1839,7 @@ function submitAdditionalInterventionModuleForm(){
                     else if (response === `Sorry you don't have the rights to add record please contact the administrator`){
                         Swal.fire({
                             icon: 'error',
-                            title: 'Error!', 
+                            title: 'Error!',
                             html: `<center>Sorry you don't have the rights to add record please contact the administrator.</center>`
                         });
                         closeAdditionalInterventionModuleForm();
@@ -1850,7 +1850,7 @@ function submitAdditionalInterventionModuleForm(){
                     else if (response === `Case already closed add record was disabled`){
                         Swal.fire({
                             icon: 'error',
-                            title: 'Error!', 
+                            title: 'Error!',
                             html: `<center>Case already closed add record was disabled.</center>`
                         });
                         closeAdditionalInterventionModuleForm();
@@ -1881,9 +1881,9 @@ function submitAdditionalInterventionModuleForm(){
 }
 
 
-// End of submit additional Intervention Module info form using Sweet Alert 
+// End of submit additional Intervention Module info form using Sweet Alert
 
-// Start of getting the additional Intervention Module info 
+// Start of getting the additional Intervention Module info
 
 
 function closeAdditionalInterventionModuleForm(){
@@ -1957,11 +1957,11 @@ function closeAdditionalInterventionModuleForm(){
     // Unhide Save Button
     $('#inter_mod_modal_save').removeAttr('hidden');
 
-    // Removed disabled and readonly in input, textarea and select option 
+    // Removed disabled and readonly in input, textarea and select option
     $('#addInterventionModulenfos * input').removeAttr('readonly');
     $('#addInterventionModulenfos * select').removeAttr('disabled');
     $('#addInterventionModulenfos * textarea').removeAttr('readonly');
-    
+
     // Start of Reset Type of Service and Specific Interventions
 
     // Empty Type of Service/Specific Interventions dropdown list
@@ -1970,7 +1970,7 @@ function closeAdditionalInterventionModuleForm(){
     $('#im_speci_interv_modal').empty();
 
     // Add Please Select Option
-    
+
     $('#im_type_of_service_modal').prepend('<option value="">Please Select</option>');
     $('#im_speci_interv_modal').prepend('<option value="">Please Select</option>');
 
@@ -2006,7 +2006,7 @@ function closeAdditionalInterventionModuleForm(){
       }
     }
 
-    
+
     var im_type_of_serviceSel = document.getElementById('im_type_of_service_modal');
     var im_speci_intervSel = document.getElementById('im_speci_interv_modal');
     for (var x in im_type_of_serviceObject) {
@@ -2055,9 +2055,9 @@ function closeAdditionalInterventionModuleForm(){
 }
 
 
-// End of getting the additional Intervention Module info 
+// End of getting the additional Intervention Module info
 
-// Start of editing the additional Intervention Module specific info 
+// Start of editing the additional Intervention Module specific info
 
 
 function getSpecificAdditionalInterventionModuleForm(id, option){
@@ -2074,12 +2074,12 @@ function getSpecificAdditionalInterventionModuleForm(id, option){
 
         // Hide Save Button
         $('#inter_mod_modal_save').attr('hidden','hidden');
-    
+
         // Set input, textarea and select option to disabled and readonly
         $('#addInterventionModulenfos * input').attr('readonly','readonly');
         $('#addInterventionModulenfos * select').attr('disabled','disabled');
         $('#addInterventionModulenfos * textarea').attr('readonly','readonly');
-    
+
     }
 
     else if(option == 'Edit'){
@@ -2152,15 +2152,15 @@ function getSpecificAdditionalInterventionModuleForm(id, option){
                 //     $('#inputspeIntModal').removeAttr('readonly');
                 // }
                 // else if (result.im_speci_interv_modal == 'A. Others') {
-            
+
                 //     $('#inputspeIntModal').removeAttr('readonly');
                 // }
                 // else if (result.im_speci_interv_modal == 'F. Others') {
-            
+
                 //     $('#inputspeIntModal').removeAttr('readonly');
                 // }
                 // else if (result.im_speci_interv_modal == 'G. Others') {
-            
+
                 //     $('#inputspeIntModal').removeAttr('readonly');
                 // }
                 // ((result.im_serv_prov_modal == 'Others') ? $('#inputserviceproviderModal').removeAttr('readonly') : $('#inputserviceproviderModal').attr('readonly','readonly'));
@@ -2192,13 +2192,13 @@ function getSpecificAdditionalInterventionModuleForm(id, option){
             }
 
         }
-    });   
+    });
 }
 
 
-// End of editing the additional Intervention Module specific info 
+// End of editing the additional Intervention Module specific info
 
-// Start of update additional Intervention Module info form using Sweet Alert 
+// Start of update additional Intervention Module info form using Sweet Alert
 
 
 function updateAdditionalInterventionModuleForm(id){
@@ -2221,7 +2221,7 @@ function updateAdditionalInterventionModuleForm(id){
                     if (response === 'Updating Intervention Module Info Success'){
                         Swal.fire({
                             icon: 'success',
-                            title: 'Saved!', 
+                            title: 'Saved!',
                             html: `<center>Updating Intervention Module Info Success.</center>`
                         });
                         closeAdditionalInterventionModuleForm();
@@ -2232,7 +2232,7 @@ function updateAdditionalInterventionModuleForm(id){
                     else if (response === 'Case already closed editing was disabled'){
                         Swal.fire({
                             icon: 'error',
-                            title: 'Error!', 
+                            title: 'Error!',
                             html: `<center>Case already closed editing was disabled.</center>`
                         });
                         closeAdditionalInterventionModuleForm();
@@ -2243,7 +2243,7 @@ function updateAdditionalInterventionModuleForm(id){
                     else if (response === `Sorry you don't have the rights to update this case please contact the administrator`){
                         Swal.fire({
                             icon: 'error',
-                            title: 'Error!', 
+                            title: 'Error!',
                             html: `<center>Sorry you don't have the rights to update this case please contact the administrator.</center>`
                         });
                         closeAdditionalInterventionModuleForm();
@@ -2274,10 +2274,10 @@ function updateAdditionalInterventionModuleForm(id){
 }
 
 
-// End of update additional Intervention Module info form using Sweet Alert 
+// End of update additional Intervention Module info form using Sweet Alert
 
-// Start of deleting additional Intervention Module info Sweet Alert modal 
- 
+// Start of deleting additional Intervention Module info Sweet Alert modal
+
 
     function deleteSpecificAdditionalInterventionModuleModal(id){
         Swal.fire({
@@ -2301,7 +2301,7 @@ function updateAdditionalInterventionModuleForm(id){
                         if (response === 'The Intervention Module Info was successfully deleted'){
                             Swal.fire({
                                 icon: 'success',
-                                title: 'Deleted!', 
+                                title: 'Deleted!',
                                 html: `<center>The Intervention Module Info was successfully deleted.</html>`
                             });
                             closeAdditionalInterventionModuleForm();
@@ -2309,7 +2309,7 @@ function updateAdditionalInterventionModuleForm(id){
                         else if (response === `Sorry you don't have the rights to delete case record please contact the administrator`){
                             Swal.fire({
                                 icon: 'error',
-                                title: 'Error!', 
+                                title: 'Error!',
                                 html: `<center>Sorry you don't have the rights to delete case record please contact the administrator.</html>`
                             });
                             closeAdditionalInterventionModuleForm();
@@ -2317,7 +2317,7 @@ function updateAdditionalInterventionModuleForm(id){
                         else if (response === 'Case already closed delete was disabled'){
                             Swal.fire({
                                 icon: 'error',
-                                title: 'Error!', 
+                                title: 'Error!',
                                 html: `<center>Case already closed delete was disabled.</html>`
                             });
                             closeAdditionalInterventionModuleForm();
@@ -2335,9 +2335,9 @@ function updateAdditionalInterventionModuleForm(id){
     }
 
 
-// End of deleting additional Intervention Module info Sweet Alert modal 
+// End of deleting additional Intervention Module info Sweet Alert modal
 
-// Start of change Service Provider confirmation using Sweet Alert 
+// Start of change Service Provider confirmation using Sweet Alert
 
 
 function changeServiceProvider(select_tag_id){
@@ -2370,15 +2370,15 @@ function changeServiceProvider(select_tag_id){
 
                     $('#'+ select_tag_id +'').append('<option value="Others">Others</option>');
                 }
-            }); 
+            });
         }
     });
 }
 
 
-// End of change Service Provider confirmation using Sweet Alert 
+// End of change Service Provider confirmation using Sweet Alert
 
-// Start of change Relationship to the Victim-Survivor confirmation using Sweet Alert 
+// Start of change Relationship to the Victim-Survivor confirmation using Sweet Alert
 
 
 function changeRelationshipToTheVictimSurvivor(select_tag_id){
@@ -2411,15 +2411,15 @@ function changeRelationshipToTheVictimSurvivor(select_tag_id){
 
                     $('#'+ select_tag_id +'').append('<option value="Other Relatives, Specify:">Other Relatives, Specify:</option>');
                 }
-            }); 
+            });
         }
     });
 }
 
 
-// End of change Relationship to the Victim-Survivor confirmation using Sweet Alert 
+// End of change Relationship to the Victim-Survivor confirmation using Sweet Alert
 
-// Start of change Place of Incidence confirmation using Sweet Alert 
+// Start of change Place of Incidence confirmation using Sweet Alert
 
 
 function changePlaceOfIncidence(select_tag_id){
@@ -2452,15 +2452,15 @@ function changePlaceOfIncidence(select_tag_id){
 
                     $('#'+ select_tag_id +'').append('<option value="Others">Others</option>');
                 }
-            }); 
+            });
         }
     });
 }
 
 
-// End of change Place of Incidence confirmation using Sweet Alert 
+// End of change Place of Incidence confirmation using Sweet Alert
 
-// Start of change Religion confirmation using Sweet Alert 
+// Start of change Religion confirmation using Sweet Alert
 
 
 function changeReligion(select_tag_id){
@@ -2493,15 +2493,15 @@ function changeReligion(select_tag_id){
 
                     $('#'+ select_tag_id +'').append('<option value="Others">Others</option>');
                 }
-            }); 
+            });
         }
     });
 }
 
 
-// End of change Religion confirmation using Sweet Alert 
+// End of change Religion confirmation using Sweet Alert
 
-// Start of change address confirmation using Sweet Alert 
+// Start of change address confirmation using Sweet Alert
 
 
 function changeAddress(select_tag_region_id, select_tag_province_id, select_tag_city_id, select_tag_barangay_id,){
@@ -2536,12 +2536,51 @@ function changeAddress(select_tag_region_id, select_tag_province_id, select_tag_
         // Reset Automated Dropdowns Location
 
         $('#'+ select_tag_region_id +'').ph_locations('fetch_list');
-        
+
     }
     });
 }
 
 
-// End of change address confirmation using Sweet Alert 
+    // under create_case/script for incident details
 
-// End of Javascript 
+// checkboxToggle.js
+
+function toggleSubOptions(checkbox) {
+    var subOptions = document.querySelectorAll('.form-check-input[name^="id_ipv_"]');
+    subOptions.forEach(function (option) {
+        option.disabled = !checkbox.checked;
+        option.checked = false; // Clear the checkbox
+    });
+}
+
+
+function toggleSubOptions_trafficking(checkbox) {
+    var subOptions = document.querySelectorAll('.form-check-input[name^="id_traf_per_"]');
+    subOptions.forEach(function (option) {
+      option.disabled = !checkbox.checked;
+      option.checked = false;
+    });
+  }
+
+  function toggleSubOptions_Sexual_Harassment(checkbox) {
+    var subOptions = document.querySelectorAll('.form-check-input[name^="id_sex_hara_"]');
+    subOptions.forEach(function (option) {
+      option.disabled = !checkbox.checked;
+      option.checked = false;
+    });
+  }
+
+  function toggleSubOptions_Abuse_Discrimination(checkbox) {
+    var subOptions = document.querySelectorAll('.form-check-input[name^="id_chi_abu_"]');
+    subOptions.forEach(function (option) {
+      option.disabled = !checkbox.checked;
+      option.checked = false;
+    });
+  }
+
+
+
+// End of change address confirmation using Sweet Alert
+
+// End of Javascript

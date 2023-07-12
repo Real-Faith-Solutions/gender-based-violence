@@ -35,7 +35,7 @@
                 </div>
                 <!-- /.container-fluid -->
 
-                <footer class="main-footer p-3 d-flex justify-content-center">
+                <footer class="main-footer pt-3 d-flex justify-content-center">
                     <p class="text-center"><strong><a href="{{ env('APP_URL') }}">GBV Management System</a>.</strong> All rights reserved. Developed By <strong style="color: #4e73df;">Real Faith Solutions.</strong></p>
                 </footer>
             </div>

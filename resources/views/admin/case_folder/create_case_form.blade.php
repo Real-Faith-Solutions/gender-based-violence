@@ -42,16 +42,10 @@
                                 <hr class="bg-dark my-3 px-5" />
                                 <div class="card-body">
                                     <div class="row mb-3">
-                                        <div class="col">
-                                            <input type="checkbox" name="client_made_a_report_before" value="Yes"/>
-                                            <span class="card-text">Has the client made a report before?</span>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
                                         <div class="col"><span><p class="card-text">Date of Intake</p></span>
                                             <input type="date" name="date_of_intake" class="w-100 date text-box form-control" />
                                         </div>
-                                        <div class="col"><span><p class="card-text">Case No.</p></span>
+                                        <div class="col"><span><p class="card-text">Case No.<Span class="asterisk">*</Span></p></span>
                                             <input type="text" id="case_no" name="case_no" placeholder="" class="w-100 form-control"/>
                                         </div>
                                         <div class="col"><span><p class="card-text">Type of Client</p></span>
@@ -1324,7 +1318,7 @@
                             <hr class="bg-dark my-3" />
                             <input type="button" name="previous" class="previous btn btn-secondary btn-md px-5 mx-1 float-end" value="Back" />
                             <input type="hidden" id="form_status" name="form_status" />
-                            <input type="button" class="btn btn-danger btn-md px-5 mx-1 float-end" value="Submit" onclick="submitCreateCaseForm('Submitted')"/>
+                            <input type="button" class="btn btn-danger btn-md px-5 mx-1 float-end" value="Submit" onclick="submitCreateCaseForm('Submit')"/>
                             <input type="button" class="btn btn-danger btn-md px-5 mx-1 float-end" value="Save as Draft" onclick="submitCreateCaseForm('Draft')"/>
                         </fieldset>
                         <center id="error-form">

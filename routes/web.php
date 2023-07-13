@@ -32,6 +32,7 @@ use App\Http\Controllers\RelationshipToVictimSurvivorsController;
 use App\Http\Controllers\ReligionsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ForgotPasswordController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -352,6 +353,8 @@ Route::get('/forgot-password', [ForgotPasswordController::class, 'forgotPassword
 Route::post('/forgot-password', [ForgotPasswordController::class, 'forgotPasswordHomePage'])->name('password.email');
 Route::get('/reset-password/{token}', [ForgotPasswordController::class, 'getPasswordResetPage'])->name('password.reset');
 Route::get('/logout', [AuthController::class, 'userLogout'])->middleware('userauth');
+Route::get('/register', [RegisterController::class, 'registerView']);
+
 
 // Route::get('/registration', [ParentPageRedirect::class, 'registrationHomePage']);
 

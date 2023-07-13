@@ -1,12 +1,12 @@
 @extends('layout_plain')
 
 @section('content')
-<div class="row justify-content-center">
-<div class="card o-hidden border-0 shadow-lg my-2 col-xl-10 col-lg-12 col-md-9">
+<div class="row justify-content-center" style="padding-top:18vh;">
+<div class="card o-hidden border-0 shadow-lg my-2 col-xl-7 col-lg-8 col-md-9">
     <div class="card-body p-0">
         <!-- Nested Row within Card Body -->
         <div class="row">
-            <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+            <div class="col-lg-5 d-none d-lg-block" style="background-image: url('{{ asset('images/gbv_logos.png') }}'); background-size: contain; background-repeat: no-repeat;"></div>
             <div class="col-lg-7">
                 <div class="p-5">
                     <div class="text-center">

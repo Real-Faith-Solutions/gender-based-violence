@@ -196,28 +196,29 @@
                                                 <option value="">Please Select</option>
                                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                                             </select>
-                                            <input type="hidden" id="region_id" name="region"/>
+                                            <input type="hidden" id="region" name="region"/>
                                         </div>
                                         <div class="col"><span><p class="card-text">Province</p></span>
-                                            <select id="province" aria-aria-controls='example' class="date-picker w-100 form-control">
+                                            <select id="api_provinces" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                                             </select>
-                                            <input type="hidden" id="province_id" name="province"/>
+                                            <input type="hidden" id="api_provinces" name="province"/>
                                         </div>
+
                                         <div class="col"><span><p class="card-text">City/Municipality</p></span>
-                                            <select id="city" aria-aria-controls='example' class="date-picker w-100 form-control">
+                                            <select id="api_municipality_or_city" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                                             </select>
-                                            <input type="hidden" id="city_id" name="city"/>
+                                            <input type="hidden" id="api_municipality_or_city" name="city"/>
                                         </div>
                                     </div>
 
                                     <div class="row mb-2">
                                         <div class="col"><span><p class="card-text">Barangay</p></span>
-                                            <select id="barangay" aria-aria-controls='example' class="date-picker w-100 form-control">
+                                            <select id="api_barangay_name" aria-aria-controls='example' class="date-picker w-100 form-control">
                                                 {{-- Drop-down list on this field are manipulated on "public/js/scripts.js" file --}}
                                             </select>
-                                            <input type="hidden" id="barangay_id" name="barangay"/>
+                                            <input type="hidden" id="api_barangay_name" name="barangay"/>
                                         </div>
 
                                         <div class="col"><span><p class="card-text">Street</p></span>

@@ -51,6 +51,8 @@ class CreateIncidenceDetailsTable extends Migration
             $table->tinyText('id_chi_abu_others_spec')->nullable();
             $table->tinyText('id_chi_abu_sex_int')->nullable();
             $table->tinyText('id_chi_abu_phys_abu')->nullable();
+            $table->tinyText('id_chi_abu_neglected')->nullable();
+            $table->tinyText('id_chi_abu_abandoned')->nullable();
             $table->longText('id_descr_inci')->nullable();
             $table->date('id_date_of_inci')->nullable();
             $table->time('id_time_of_inci')->nullable();
@@ -62,7 +64,7 @@ class CreateIncidenceDetailsTable extends Migration
             $table->text('inci_det_barangay')->nullable();
             $table->tinyText('id_pla_of_inci')->nullable();
             $table->tinyText('id_pi_oth_pls_spec')->nullable();
-            $table->tinyText('id_was_inc_perp_onl')->nullable();                       
+            $table->tinyText('id_was_inc_perp_onl')->nullable();
             $table->timestamps();
         });
     }

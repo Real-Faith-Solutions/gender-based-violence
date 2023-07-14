@@ -2,8 +2,8 @@
 
 @section('content')
     <!-- Outer Row -->
-    <div class="row justify-content-center mt-5 pt-5" style="height: 82vh; margin:auto;">
-        <div class="col-xl-9 col-lg-12 col-md-12">
+    <div class="row justify-content-center mt-5 pt-5" style="height: 80vh;">
+        <div class="col-xl-9 col-lg-5 col-md-12">
             <div class="card o-hidden border-0 shadow-lg my-2">
                 <div class="card-body p-0">
                     <!-- Nested Row within Card Body -->
@@ -31,6 +31,8 @@
                                 <hr>
                                 <div class="text-center">
                                     <a class="small" href="{{ env('APP_URL') }}forgot-password">Forgot Password?</a>
+                                    <br>
+                                    <a class="small" href="{{ env('APP_URL') }}register">SignUp</a>
                                 </div>
                             </div>
                         </div>
